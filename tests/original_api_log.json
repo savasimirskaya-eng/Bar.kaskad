@@ -1,0 +1,605 @@
+[
+  {
+    "step": "1_reg",
+    "timestamp": "2026-04-25T11:11:14.866937",
+    "request": {
+      "method": "POST",
+      "path": "/register",
+      "payload": null,
+      "headers": {}
+    },
+    "response": {
+      "status_code": 200,
+      "body": {
+        "status": "ok",
+        "id": "BAR-0FA0",
+        "token": "b9225e2aaa4f45c5a89db2ca4c2dd176"
+      }
+    }
+  },
+  {
+    "step": "2_menu_day",
+    "timestamp": "2026-04-25T11:11:16.370084",
+    "request": {
+      "method": "GET",
+      "path": "/menu",
+      "payload": null,
+      "headers": {
+        "X-Time": "12:00"
+      }
+    },
+    "response": {
+      "status_code": 200,
+      "body": {
+        "status": "ok",
+        "drinks": [
+          {
+            "name": "Куба Либре",
+            "price": 15,
+            "ingredients": [
+              "кола",
+              "лёд",
+              "ром"
+            ]
+          },
+          {
+            "name": "Отвёртка",
+            "price": 12,
+            "ingredients": [
+              "водка",
+              "сок"
+            ]
+          },
+          {
+            "name": "Джин-тоник",
+            "price": 14,
+            "ingredients": [
+              "джин",
+              "лёд",
+              "тоник"
+            ]
+          },
+          {
+            "name": "Виски-кола",
+            "price": 13,
+            "ingredients": [
+              "виски",
+              "кола"
+            ]
+          },
+          {
+            "name": "Текила-санрайз",
+            "price": 14,
+            "ingredients": [
+              "сок",
+              "текила"
+            ]
+          },
+          {
+            "name": "Русский",
+            "price": 10,
+            "ingredients": [
+              "водка",
+              "лёд"
+            ]
+          },
+          {
+            "name": "Белый русский",
+            "price": 16,
+            "ingredients": [
+              "водка",
+              "лёд",
+              "молоко"
+            ]
+          },
+          {
+            "name": "Лонг-Айленд",
+            "price": 25,
+            "ingredients": [
+              "водка",
+              "джин",
+              "кола",
+              "ром",
+              "текила"
+            ]
+          }
+        ],
+        "balance": 100,
+        "mood_level": "normal"
+      }
+    }
+  },
+  {
+    "step": "3_order_rus_1",
+    "timestamp": "2026-04-25T11:11:17.873198",
+    "request": {
+      "method": "POST",
+      "path": "/order",
+      "payload": {
+        "name": "Русский"
+      },
+      "headers": {}
+    },
+    "response": {
+      "status_code": 200,
+      "body": {
+        "status": "ok",
+        "drink": "Русский",
+        "price": 10,
+        "balance": 90,
+        "mood_level": "normal"
+      }
+    }
+  },
+  {
+    "step": "4_order_rus_2",
+    "timestamp": "2026-04-25T11:11:19.376396",
+    "request": {
+      "method": "POST",
+      "path": "/order",
+      "payload": {
+        "name": "Русский"
+      },
+      "headers": {}
+    },
+    "response": {
+      "status_code": 200,
+      "body": {
+        "status": "ok",
+        "drink": "Русский",
+        "price": 10,
+        "balance": 80,
+        "mood_level": "normal",
+        "favorite": true
+      }
+    }
+  },
+  {
+    "step": "5_order_rus_3",
+    "timestamp": "2026-04-25T11:11:20.879187",
+    "request": {
+      "method": "POST",
+      "path": "/order",
+      "payload": {
+        "name": "Русский"
+      },
+      "headers": {}
+    },
+    "response": {
+      "status_code": 200,
+      "body": {
+        "status": "ok",
+        "drink": "Русский",
+        "price": 10,
+        "balance": 70,
+        "mood_level": "normal",
+        "favorite": true
+      }
+    }
+  },
+  {
+    "step": "6_order_rus_4",
+    "timestamp": "2026-04-25T11:11:22.381953",
+    "request": {
+      "method": "POST",
+      "path": "/order",
+      "payload": {
+        "name": "Русский"
+      },
+      "headers": {}
+    },
+    "response": {
+      "status_code": 200,
+      "body": {
+        "status": "prompt",
+        "prompt": "repeat_check",
+        "balance": 70,
+        "mood_level": "normal"
+      }
+    }
+  },
+  {
+    "step": "7_order_rus_5",
+    "timestamp": "2026-04-25T11:11:23.884818",
+    "request": {
+      "method": "POST",
+      "path": "/order",
+      "payload": {
+        "name": "Русский"
+      },
+      "headers": {}
+    },
+    "response": {
+      "status_code": 200,
+      "body": {
+        "status": "prompt",
+        "prompt": "repeat_check",
+        "balance": 70,
+        "mood_level": "normal"
+      }
+    }
+  },
+  {
+    "step": "8_order_rus_6",
+    "timestamp": "2026-04-25T11:11:25.387708",
+    "request": {
+      "method": "POST",
+      "path": "/order",
+      "payload": {
+        "name": "Русский"
+      },
+      "headers": {}
+    },
+    "response": {
+      "status_code": 200,
+      "body": {
+        "status": "prompt",
+        "prompt": "repeat_check",
+        "balance": 70,
+        "mood_level": "normal"
+      }
+    }
+  },
+  {
+    "step": "9_order_rus_7",
+    "timestamp": "2026-04-25T11:11:26.890778",
+    "request": {
+      "method": "POST",
+      "path": "/order",
+      "payload": {
+        "name": "Русский"
+      },
+      "headers": {}
+    },
+    "response": {
+      "status_code": 200,
+      "body": {
+        "status": "prompt",
+        "prompt": "repeat_check",
+        "balance": 70,
+        "mood_level": "normal"
+      }
+    }
+  },
+  {
+    "step": "10_profile_after_7",
+    "timestamp": "2026-04-25T11:11:28.393392",
+    "request": {
+      "method": "GET",
+      "path": "/profile",
+      "payload": null,
+      "headers": {}
+    },
+    "response": {
+      "status_code": 200,
+      "body": {
+        "status": "ok",
+        "id": "BAR-0FA0",
+        "rank": "Гость",
+        "total_orders": 3,
+        "unique_drinks": 1,
+        "favorite_drink": "Русский",
+        "bar_closed": false
+      }
+    }
+  },
+  {
+    "step": "11_mix_foo_1",
+    "timestamp": "2026-04-25T11:11:29.896452",
+    "request": {
+      "method": "POST",
+      "path": "/mix",
+      "payload": {
+        "ingredients": [
+          "foo"
+        ]
+      },
+      "headers": {}
+    },
+    "response": {
+      "status_code": 200,
+      "body": {
+        "status": "error",
+        "error": "invalid_ingredient",
+        "balance": 70,
+        "mood_level": "grumpy"
+      }
+    }
+  },
+  {
+    "step": "12_mix_foo_2",
+    "timestamp": "2026-04-25T11:11:31.399745",
+    "request": {
+      "method": "POST",
+      "path": "/mix",
+      "payload": {
+        "ingredients": [
+          "foo"
+        ]
+      },
+      "headers": {}
+    },
+    "response": {
+      "status_code": 200,
+      "body": {
+        "status": "error",
+        "error": "invalid_ingredient",
+        "balance": 70,
+        "mood_level": "hostile"
+      }
+    }
+  },
+  {
+    "step": "13_mix_foo_3",
+    "timestamp": "2026-04-25T11:11:32.902796",
+    "request": {
+      "method": "POST",
+      "path": "/mix",
+      "payload": {
+        "ingredients": [
+          "foo"
+        ]
+      },
+      "headers": {}
+    },
+    "response": {
+      "status_code": 200,
+      "body": {
+        "status": "error",
+        "error": "invalid_ingredient",
+        "balance": 70,
+        "mood_level": "hostile"
+      }
+    }
+  },
+  {
+    "step": "14_mix_foo_4",
+    "timestamp": "2026-04-25T11:11:34.405784",
+    "request": {
+      "method": "POST",
+      "path": "/mix",
+      "payload": {
+        "ingredients": [
+          "foo"
+        ]
+      },
+      "headers": {}
+    },
+    "response": {
+      "status_code": 200,
+      "body": {
+        "status": "error",
+        "error": "invalid_ingredient",
+        "balance": 70,
+        "mood_level": "hostile"
+      }
+    }
+  },
+  {
+    "step": "15_menu_after_errors",
+    "timestamp": "2026-04-25T11:11:35.908805",
+    "request": {
+      "method": "GET",
+      "path": "/menu",
+      "payload": null,
+      "headers": {
+        "X-Time": "12:00"
+      }
+    },
+    "response": {
+      "status_code": 200,
+      "body": {
+        "status": "ok",
+        "drinks": [
+          {
+            "name": "Куба Либре",
+            "price": 23,
+            "ingredients": [
+              "кола",
+              "лёд",
+              "ром"
+            ]
+          },
+          {
+            "name": "Отвёртка",
+            "price": 18,
+            "ingredients": [
+              "водка",
+              "сок"
+            ]
+          },
+          {
+            "name": "Джин-тоник",
+            "price": 21,
+            "ingredients": [
+              "джин",
+              "лёд",
+              "тоник"
+            ]
+          },
+          {
+            "name": "Виски-кола",
+            "price": 20,
+            "ingredients": [
+              "виски",
+              "кола"
+            ]
+          },
+          {
+            "name": "Текила-санрайз",
+            "price": 21,
+            "ingredients": [
+              "сок",
+              "текила"
+            ]
+          },
+          {
+            "name": "Русский",
+            "price": 11,
+            "ingredients": [
+              "водка",
+              "лёд"
+            ]
+          },
+          {
+            "name": "Белый русский",
+            "price": 24,
+            "ingredients": [
+              "водка",
+              "лёд",
+              "молоко"
+            ]
+          },
+          {
+            "name": "Лонг-Айленд",
+            "price": 38,
+            "ingredients": [
+              "водка",
+              "джин",
+              "кола",
+              "ром",
+              "текила"
+            ]
+          }
+        ],
+        "balance": 70,
+        "mood_level": "hostile"
+      }
+    }
+  },
+  {
+    "step": "16_mix_mistake",
+    "timestamp": "2026-04-25T11:11:37.412086",
+    "request": {
+      "method": "POST",
+      "path": "/mix",
+      "payload": {
+        "ingredients": [
+          "лёд",
+          "молоко",
+          "текила"
+        ]
+      },
+      "headers": {}
+    },
+    "response": {
+      "status_code": 200,
+      "body": {
+        "status": "ok",
+        "drink": "Ошибка бармена",
+        "price": 0,
+        "secret": true,
+        "effect": "mood_max",
+        "balance": 70,
+        "mood_level": "generous"
+      }
+    }
+  },
+  {
+    "step": "17_balance_after_mistake",
+    "timestamp": "2026-04-25T11:11:38.915278",
+    "request": {
+      "method": "GET",
+      "path": "/balance",
+      "payload": null,
+      "headers": {}
+    },
+    "response": {
+      "status_code": 200,
+      "body": {
+        "status": "ok",
+        "balance": 70,
+        "mood_level": "generous"
+      }
+    }
+  },
+  {
+    "step": "18_order_mix_drinks",
+    "timestamp": "2026-04-25T11:11:40.417752",
+    "request": {
+      "method": "POST",
+      "path": "/order",
+      "payload": {
+        "name": "Отвёртка"
+      },
+      "headers": {}
+    },
+    "response": {
+      "status_code": 200,
+      "body": {
+        "status": "ok",
+        "drink": "Отвёртка",
+        "price": 9,
+        "balance": 61,
+        "mood_level": "generous"
+      }
+    }
+  },
+  {
+    "step": "19_order_mix_drinks2",
+    "timestamp": "2026-04-25T11:11:41.920777",
+    "request": {
+      "method": "POST",
+      "path": "/order",
+      "payload": {
+        "name": "Куба Либре"
+      },
+      "headers": {}
+    },
+    "response": {
+      "status_code": 200,
+      "body": {
+        "status": "ok",
+        "drink": "Куба Либре",
+        "price": 11,
+        "balance": 50,
+        "mood_level": "generous"
+      }
+    }
+  },
+  {
+    "step": "20_order_mix_drinks3",
+    "timestamp": "2026-04-25T11:11:43.423430",
+    "request": {
+      "method": "POST",
+      "path": "/order",
+      "payload": {
+        "name": "Джин-тоник"
+      },
+      "headers": {}
+    },
+    "response": {
+      "status_code": 200,
+      "body": {
+        "status": "ok",
+        "drink": "Джин-тоник",
+        "price": 0,
+        "balance": 50,
+        "mood_level": "generous",
+        "generous_free": true
+      }
+    }
+  },
+  {
+    "step": "21_profile_ranks",
+    "timestamp": "2026-04-25T11:11:44.926036",
+    "request": {
+      "method": "GET",
+      "path": "/profile",
+      "payload": null,
+      "headers": {}
+    },
+    "response": {
+      "status_code": 200,
+      "body": {
+        "status": "ok",
+        "id": "BAR-0FA0",
+        "rank": "Постоянный",
+        "total_orders": 6,
+        "unique_drinks": 4,
+        "favorite_drink": "Русский",
+        "bar_closed": false
+      }
+    }
+  }
+]
