@@ -1,0 +1,9201 @@
+[
+  {
+    "timestamp": "2026-04-25T11:17:53.381965",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/menu",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drinks": [
+        {
+          "name": "Куба Либре",
+          "price": 15,
+          "ingredients": [
+            "кола",
+            "лёд",
+            "ром"
+          ]
+        },
+        {
+          "name": "Отвёртка",
+          "price": 12,
+          "ingredients": [
+            "водка",
+            "сок"
+          ]
+        },
+        {
+          "name": "Джин-тоник",
+          "price": 14,
+          "ingredients": [
+            "джин",
+            "лёд",
+            "тоник"
+          ]
+        },
+        {
+          "name": "Виски-кола",
+          "price": 13,
+          "ingredients": [
+            "виски",
+            "кола"
+          ]
+        },
+        {
+          "name": "Текила-санрайз",
+          "price": 14,
+          "ingredients": [
+            "сок",
+            "текила"
+          ]
+        },
+        {
+          "name": "Русский",
+          "price": 10,
+          "ingredients": [
+            "водка",
+            "лёд"
+          ]
+        },
+        {
+          "name": "Белый русский",
+          "price": 16,
+          "ingredients": [
+            "водка",
+            "лёд",
+            "молоко"
+          ]
+        },
+        {
+          "name": "Лонг-Айленд",
+          "price": 25,
+          "ingredients": [
+            "водка",
+            "джин",
+            "кола",
+            "ром",
+            "текила"
+          ]
+        }
+      ],
+      "balance": 100,
+      "mood_level": "normal"
+    },
+    "note": "menu_day"
+  },
+  {
+    "timestamp": "2026-04-25T11:17:55.485433",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/order",
+    "payload": {
+      "name": "Русский"
+    },
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drink": "Русский",
+      "price": 10,
+      "balance": 90,
+      "mood_level": "normal"
+    },
+    "note": "order_стандарт"
+  },
+  {
+    "timestamp": "2026-04-25T11:17:57.587057",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "водка",
+        "лёд"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drink": "Русский",
+      "price": 8,
+      "balance": 82,
+      "mood_level": "normal"
+    },
+    "note": "mix_стандарт"
+  },
+  {
+    "timestamp": "2026-04-25T11:17:59.704306",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/balance",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "balance": 82,
+      "mood_level": "normal"
+    },
+    "note": "balance"
+  },
+  {
+    "timestamp": "2026-04-25T11:18:01.820327",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/tip",
+    "payload": {
+      "amount": 5
+    },
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "tip": 5,
+      "balance": 77,
+      "mood_level": "normal"
+    },
+    "note": "tip_5"
+  },
+  {
+    "timestamp": "2026-04-25T11:18:03.954595",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/history",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "orders": [
+        {
+          "drink": "Русский",
+          "price": 10,
+          "method": "order"
+        },
+        {
+          "drink": "Русский",
+          "price": 8,
+          "method": "mix"
+        }
+      ],
+      "balance": 77,
+      "mood_level": "normal"
+    },
+    "note": "history"
+  },
+  {
+    "timestamp": "2026-04-25T11:18:06.045040",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/profile",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "id": "BAR-0391",
+      "rank": "Новичок",
+      "total_orders": 2,
+      "unique_drinks": 1,
+      "favorite_drink": null,
+      "bar_closed": false
+    },
+    "note": "profile"
+  },
+  {
+    "timestamp": "2026-04-25T11:18:08.156479",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/menu",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drinks": [
+        {
+          "name": "Ночной русский",
+          "price": 8,
+          "ingredients": [
+            "водка",
+            "лёд",
+            "молоко"
+          ]
+        },
+        {
+          "name": "Бессонница",
+          "price": 10,
+          "ingredients": [
+            "кола",
+            "ром",
+            "тоник"
+          ]
+        },
+        {
+          "name": "Лунный свет",
+          "price": 12,
+          "ingredients": [
+            "джин",
+            "сок",
+            "тоник"
+          ]
+        }
+      ],
+      "balance": 77,
+      "mood_level": "normal"
+    },
+    "note": "menu_00:00"
+  },
+  {
+    "timestamp": "2026-04-25T11:18:10.273102",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/order",
+    "payload": {
+      "name": "Русский"
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 77,
+      "mood_level": "normal"
+    },
+    "note": "order_00:00"
+  },
+  {
+    "timestamp": "2026-04-25T11:18:12.391468",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/menu",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drinks": [
+        {
+          "name": "Куба Либре",
+          "price": 15,
+          "ingredients": [
+            "кола",
+            "лёд",
+            "ром"
+          ]
+        },
+        {
+          "name": "Отвёртка",
+          "price": 12,
+          "ingredients": [
+            "водка",
+            "сок"
+          ]
+        },
+        {
+          "name": "Джин-тоник",
+          "price": 14,
+          "ingredients": [
+            "джин",
+            "лёд",
+            "тоник"
+          ]
+        },
+        {
+          "name": "Виски-кола",
+          "price": 13,
+          "ingredients": [
+            "виски",
+            "кола"
+          ]
+        },
+        {
+          "name": "Текила-санрайз",
+          "price": 14,
+          "ingredients": [
+            "сок",
+            "текила"
+          ]
+        },
+        {
+          "name": "Русский",
+          "price": 10,
+          "ingredients": [
+            "водка",
+            "лёд"
+          ]
+        },
+        {
+          "name": "Белый русский",
+          "price": 16,
+          "ingredients": [
+            "водка",
+            "лёд",
+            "молоко"
+          ]
+        },
+        {
+          "name": "Лонг-Айленд",
+          "price": 25,
+          "ingredients": [
+            "водка",
+            "джин",
+            "кола",
+            "ром",
+            "текила"
+          ]
+        }
+      ],
+      "balance": 77,
+      "mood_level": "normal"
+    },
+    "note": "menu_06:00"
+  },
+  {
+    "timestamp": "2026-04-25T11:18:14.521897",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/order",
+    "payload": {
+      "name": "Русский"
+    },
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drink": "Русский",
+      "price": 10,
+      "balance": 67,
+      "mood_level": "normal"
+    },
+    "note": "order_06:00"
+  },
+  {
+    "timestamp": "2026-04-25T11:18:16.645100",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/menu",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drinks": [
+        {
+          "name": "Куба Либре",
+          "price": 15,
+          "ingredients": [
+            "кола",
+            "лёд",
+            "ром"
+          ]
+        },
+        {
+          "name": "Отвёртка",
+          "price": 12,
+          "ingredients": [
+            "водка",
+            "сок"
+          ]
+        },
+        {
+          "name": "Джин-тоник",
+          "price": 14,
+          "ingredients": [
+            "джин",
+            "лёд",
+            "тоник"
+          ]
+        },
+        {
+          "name": "Виски-кола",
+          "price": 13,
+          "ingredients": [
+            "виски",
+            "кола"
+          ]
+        },
+        {
+          "name": "Текила-санрайз",
+          "price": 14,
+          "ingredients": [
+            "сок",
+            "текила"
+          ]
+        },
+        {
+          "name": "Русский",
+          "price": 7,
+          "ingredients": [
+            "водка",
+            "лёд"
+          ]
+        },
+        {
+          "name": "Белый русский",
+          "price": 16,
+          "ingredients": [
+            "водка",
+            "лёд",
+            "молоко"
+          ]
+        },
+        {
+          "name": "Лонг-Айленд",
+          "price": 25,
+          "ingredients": [
+            "водка",
+            "джин",
+            "кола",
+            "ром",
+            "текила"
+          ]
+        }
+      ],
+      "balance": 67,
+      "mood_level": "normal"
+    },
+    "note": "menu_12:00"
+  },
+  {
+    "timestamp": "2026-04-25T11:18:18.744303",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/order",
+    "payload": {
+      "name": "Русский"
+    },
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drink": "Русский",
+      "price": 7,
+      "favorite": true,
+      "balance": 60,
+      "mood_level": "grumpy"
+    },
+    "note": "order_12:00"
+  },
+  {
+    "timestamp": "2026-04-25T11:18:20.850889",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/menu",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drinks": [
+        {
+          "name": "Куба Либре",
+          "price": 18,
+          "ingredients": [
+            "кола",
+            "лёд",
+            "ром"
+          ]
+        },
+        {
+          "name": "Отвёртка",
+          "price": 15,
+          "ingredients": [
+            "водка",
+            "сок"
+          ]
+        },
+        {
+          "name": "Джин-тоник",
+          "price": 17,
+          "ingredients": [
+            "джин",
+            "лёд",
+            "тоник"
+          ]
+        },
+        {
+          "name": "Виски-кола",
+          "price": 16,
+          "ingredients": [
+            "виски",
+            "кола"
+          ]
+        },
+        {
+          "name": "Текила-санрайз",
+          "price": 17,
+          "ingredients": [
+            "сок",
+            "текила"
+          ]
+        },
+        {
+          "name": "Русский",
+          "price": 9,
+          "ingredients": [
+            "водка",
+            "лёд"
+          ]
+        },
+        {
+          "name": "Белый русский",
+          "price": 20,
+          "ingredients": [
+            "водка",
+            "лёд",
+            "молоко"
+          ]
+        },
+        {
+          "name": "Лонг-Айленд",
+          "price": 30,
+          "ingredients": [
+            "водка",
+            "джин",
+            "кола",
+            "ром",
+            "текила"
+          ]
+        }
+      ],
+      "balance": 60,
+      "mood_level": "grumpy"
+    },
+    "note": "menu_18:00"
+  },
+  {
+    "timestamp": "2026-04-25T11:18:22.962621",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/order",
+    "payload": {
+      "name": "Русский"
+    },
+    "status_code": 200,
+    "response": {
+      "status": "prompt",
+      "prompt": "repeat_check",
+      "balance": 60,
+      "mood_level": "grumpy"
+    },
+    "note": "order_18:00"
+  },
+  {
+    "timestamp": "2026-04-25T11:18:25.063113",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/menu",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drinks": [
+        {
+          "name": "Куба Либре",
+          "price": 18,
+          "ingredients": [
+            "кола",
+            "лёд",
+            "ром"
+          ]
+        },
+        {
+          "name": "Отвёртка",
+          "price": 15,
+          "ingredients": [
+            "водка",
+            "сок"
+          ]
+        },
+        {
+          "name": "Джин-тоник",
+          "price": 17,
+          "ingredients": [
+            "джин",
+            "лёд",
+            "тоник"
+          ]
+        },
+        {
+          "name": "Виски-кола",
+          "price": 16,
+          "ingredients": [
+            "виски",
+            "кола"
+          ]
+        },
+        {
+          "name": "Текила-санрайз",
+          "price": 17,
+          "ingredients": [
+            "сок",
+            "текила"
+          ]
+        },
+        {
+          "name": "Русский",
+          "price": 9,
+          "ingredients": [
+            "водка",
+            "лёд"
+          ]
+        },
+        {
+          "name": "Белый русский",
+          "price": 20,
+          "ingredients": [
+            "водка",
+            "лёд",
+            "молоко"
+          ]
+        },
+        {
+          "name": "Лонг-Айленд",
+          "price": 30,
+          "ingredients": [
+            "водка",
+            "джин",
+            "кола",
+            "ром",
+            "текила"
+          ]
+        }
+      ],
+      "balance": 60,
+      "mood_level": "grumpy"
+    },
+    "note": "menu_23:59"
+  },
+  {
+    "timestamp": "2026-04-25T11:18:27.165676",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/order",
+    "payload": {
+      "name": "Русский"
+    },
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drink": "Русский",
+      "price": 9,
+      "favorite": true,
+      "balance": 51,
+      "mood_level": "grumpy"
+    },
+    "note": "order_23:59"
+  },
+  {
+    "timestamp": "2026-04-25T11:18:29.277606",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/menu",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drinks": [
+        {
+          "name": "Ночной русский",
+          "price": 10,
+          "ingredients": [
+            "водка",
+            "лёд",
+            "молоко"
+          ]
+        },
+        {
+          "name": "Бессонница",
+          "price": 12,
+          "ingredients": [
+            "кола",
+            "ром",
+            "тоник"
+          ]
+        },
+        {
+          "name": "Лунный свет",
+          "price": 15,
+          "ingredients": [
+            "джин",
+            "сок",
+            "тоник"
+          ]
+        }
+      ],
+      "balance": 51,
+      "mood_level": "grumpy"
+    },
+    "note": "menu_24:00"
+  },
+  {
+    "timestamp": "2026-04-25T11:18:31.401608",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/order",
+    "payload": {
+      "name": "Русский"
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 51,
+      "mood_level": "grumpy"
+    },
+    "note": "order_24:00"
+  },
+  {
+    "timestamp": "2026-04-25T11:18:33.496216",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/menu",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drinks": [
+        {
+          "name": "Куба Либре",
+          "price": 18,
+          "ingredients": [
+            "кола",
+            "лёд",
+            "ром"
+          ]
+        },
+        {
+          "name": "Отвёртка",
+          "price": 15,
+          "ingredients": [
+            "водка",
+            "сок"
+          ]
+        },
+        {
+          "name": "Джин-тоник",
+          "price": 17,
+          "ingredients": [
+            "джин",
+            "лёд",
+            "тоник"
+          ]
+        },
+        {
+          "name": "Виски-кола",
+          "price": 16,
+          "ingredients": [
+            "виски",
+            "кола"
+          ]
+        },
+        {
+          "name": "Текила-санрайз",
+          "price": 17,
+          "ingredients": [
+            "сок",
+            "текила"
+          ]
+        },
+        {
+          "name": "Русский",
+          "price": 9,
+          "ingredients": [
+            "водка",
+            "лёд"
+          ]
+        },
+        {
+          "name": "Белый русский",
+          "price": 20,
+          "ingredients": [
+            "водка",
+            "лёд",
+            "молоко"
+          ]
+        },
+        {
+          "name": "Лонг-Айленд",
+          "price": 30,
+          "ingredients": [
+            "водка",
+            "джин",
+            "кола",
+            "ром",
+            "текила"
+          ]
+        }
+      ],
+      "balance": 51,
+      "mood_level": "grumpy"
+    },
+    "note": "menu_13:60"
+  },
+  {
+    "timestamp": "2026-04-25T11:18:35.612653",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/order",
+    "payload": {
+      "name": "Русский"
+    },
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drink": "Русский",
+      "price": 9,
+      "favorite": true,
+      "balance": 42,
+      "mood_level": "grumpy"
+    },
+    "note": "order_13:60"
+  },
+  {
+    "timestamp": "2026-04-25T11:18:37.713881",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/menu",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drinks": [
+        {
+          "name": "Куба Либре",
+          "price": 18,
+          "ingredients": [
+            "кола",
+            "лёд",
+            "ром"
+          ]
+        },
+        {
+          "name": "Отвёртка",
+          "price": 15,
+          "ingredients": [
+            "водка",
+            "сок"
+          ]
+        },
+        {
+          "name": "Джин-тоник",
+          "price": 17,
+          "ingredients": [
+            "джин",
+            "лёд",
+            "тоник"
+          ]
+        },
+        {
+          "name": "Виски-кола",
+          "price": 16,
+          "ingredients": [
+            "виски",
+            "кола"
+          ]
+        },
+        {
+          "name": "Текила-санрайз",
+          "price": 17,
+          "ingredients": [
+            "сок",
+            "текила"
+          ]
+        },
+        {
+          "name": "Русский",
+          "price": 9,
+          "ingredients": [
+            "водка",
+            "лёд"
+          ]
+        },
+        {
+          "name": "Белый русский",
+          "price": 20,
+          "ingredients": [
+            "водка",
+            "лёд",
+            "молоко"
+          ]
+        },
+        {
+          "name": "Лонг-Айленд",
+          "price": 30,
+          "ingredients": [
+            "водка",
+            "джин",
+            "кола",
+            "ром",
+            "текила"
+          ]
+        }
+      ],
+      "balance": 42,
+      "mood_level": "grumpy"
+    },
+    "note": "menu_foo"
+  },
+  {
+    "timestamp": "2026-04-25T11:18:39.824996",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/order",
+    "payload": {
+      "name": "Русский"
+    },
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drink": "Русский",
+      "price": 0,
+      "free_every_7th": true,
+      "balance": 42,
+      "mood_level": "grumpy"
+    },
+    "note": "order_foo"
+  },
+  {
+    "timestamp": "2026-04-25T11:18:41.956003",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/menu",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drinks": [
+        {
+          "name": "Куба Либре",
+          "price": 18,
+          "ingredients": [
+            "кола",
+            "лёд",
+            "ром"
+          ]
+        },
+        {
+          "name": "Отвёртка",
+          "price": 15,
+          "ingredients": [
+            "водка",
+            "сок"
+          ]
+        },
+        {
+          "name": "Джин-тоник",
+          "price": 17,
+          "ingredients": [
+            "джин",
+            "лёд",
+            "тоник"
+          ]
+        },
+        {
+          "name": "Виски-кола",
+          "price": 16,
+          "ingredients": [
+            "виски",
+            "кола"
+          ]
+        },
+        {
+          "name": "Текила-санрайз",
+          "price": 17,
+          "ingredients": [
+            "сок",
+            "текила"
+          ]
+        },
+        {
+          "name": "Русский",
+          "price": 9,
+          "ingredients": [
+            "водка",
+            "лёд"
+          ]
+        },
+        {
+          "name": "Белый русский",
+          "price": 20,
+          "ingredients": [
+            "водка",
+            "лёд",
+            "молоко"
+          ]
+        },
+        {
+          "name": "Лонг-Айленд",
+          "price": 30,
+          "ingredients": [
+            "водка",
+            "джин",
+            "кола",
+            "ром",
+            "текила"
+          ]
+        }
+      ],
+      "balance": 42,
+      "mood_level": "grumpy"
+    },
+    "note": "menu_no_time"
+  },
+  {
+    "timestamp": "2026-04-25T11:18:43.969434",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/order",
+    "error": "Server disconnected without sending a response.",
+    "note": "order_no_time"
+  },
+  {
+    "timestamp": "2026-04-25T11:18:44.978267",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/menu",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drinks": [
+        {
+          "name": "Ночной русский",
+          "price": 10,
+          "ingredients": [
+            "водка",
+            "лёд",
+            "молоко"
+          ]
+        },
+        {
+          "name": "Бессонница",
+          "price": 12,
+          "ingredients": [
+            "кола",
+            "ром",
+            "тоник"
+          ]
+        },
+        {
+          "name": "Лунный свет",
+          "price": 15,
+          "ingredients": [
+            "джин",
+            "сок",
+            "тоник"
+          ]
+        }
+      ],
+      "balance": 42,
+      "mood_level": "grumpy"
+    },
+    "note": "menu_00:01"
+  },
+  {
+    "timestamp": "2026-04-25T11:18:47.513119",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/order",
+    "payload": {
+      "name": "Русский"
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 42,
+      "mood_level": "grumpy"
+    },
+    "note": "order_00:01"
+  },
+  {
+    "timestamp": "2026-04-25T11:18:49.770163",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/menu",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drinks": [
+        {
+          "name": "Ночной русский",
+          "price": 10,
+          "ingredients": [
+            "водка",
+            "лёд",
+            "молоко"
+          ]
+        },
+        {
+          "name": "Бессонница",
+          "price": 12,
+          "ingredients": [
+            "кола",
+            "ром",
+            "тоник"
+          ]
+        },
+        {
+          "name": "Лунный свет",
+          "price": 15,
+          "ingredients": [
+            "джин",
+            "сок",
+            "тоник"
+          ]
+        }
+      ],
+      "balance": 42,
+      "mood_level": "grumpy"
+    },
+    "note": "menu_05:59"
+  },
+  {
+    "timestamp": "2026-04-25T11:18:52.033782",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/order",
+    "payload": {
+      "name": "Русский"
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 42,
+      "mood_level": "grumpy"
+    },
+    "note": "order_05:59"
+  },
+  {
+    "timestamp": "2026-04-25T11:18:54.525158",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/order",
+    "payload": {
+      "name": ""
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 42,
+      "mood_level": "grumpy"
+    },
+    "note": "empty_order"
+  },
+  {
+    "timestamp": "2026-04-25T11:18:56.535528",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/order",
+    "error": "Server disconnected without sending a response.",
+    "note": "wrong_key_order"
+  },
+  {
+    "timestamp": "2026-04-25T11:18:56.949354",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": []
+    },
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drink": "Воздух",
+      "price": 0,
+      "balance": 42,
+      "mood_level": "hostile"
+    },
+    "note": "empty_mix"
+  },
+  {
+    "timestamp": "2026-04-25T11:18:59.145977",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/tip",
+    "payload": {
+      "amount": -10
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "invalid_amount",
+      "balance": 42,
+      "mood_level": "hostile"
+    },
+    "note": "negative_tip"
+  },
+  {
+    "timestamp": "2026-04-25T11:19:01.232021",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/tip",
+    "payload": {
+      "amount": 0
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "invalid_amount",
+      "balance": 42,
+      "mood_level": "hostile"
+    },
+    "note": "zero_tip"
+  },
+  {
+    "timestamp": "2026-04-25T11:19:03.485279",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/tip",
+    "payload": {
+      "amount": 9999
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "insufficient_funds",
+      "balance": 42,
+      "mood_level": "hostile"
+    },
+    "note": "huge_tip"
+  },
+  {
+    "timestamp": "2026-04-25T11:19:05.577120",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/order",
+    "payload": {
+      "ingredients": [
+        "водка",
+        "лёд"
+      ]
+    },
+    "status_code": 422,
+    "response": {
+      "detail": [
+        {
+          "type": "missing",
+          "loc": [
+            "body",
+            "name"
+          ],
+          "msg": "Field required",
+          "input": {
+            "ingredients": [
+              "водка",
+              "лёд"
+            ]
+          }
+        }
+      ]
+    },
+    "note": "order_as_mix"
+  },
+  {
+    "timestamp": "2026-04-25T11:19:08.316332",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "name": "Русский"
+    },
+    "status_code": 422,
+    "response": {
+      "detail": [
+        {
+          "type": "missing",
+          "loc": [
+            "body",
+            "ingredients"
+          ],
+          "msg": "Field required",
+          "input": {
+            "name": "Русский"
+          }
+        }
+      ]
+    },
+    "note": "mix_as_order"
+  },
+  {
+    "timestamp": "2026-04-25T11:19:11.467251",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/secret",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "not_found"
+    },
+    "note": "get_/secret"
+  },
+  {
+    "timestamp": "2026-04-25T11:19:13.470830",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/secret",
+    "error": "Server disconnected without sending a response.",
+    "note": "post_/secret"
+  },
+  {
+    "timestamp": "2026-04-25T11:19:14.299978",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/admin",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/admin"
+  },
+  {
+    "timestamp": "2026-04-25T11:19:16.401559",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/admin",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/admin"
+  },
+  {
+    "timestamp": "2026-04-25T11:19:18.489364",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/health",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/health"
+  },
+  {
+    "timestamp": "2026-04-25T11:19:20.581032",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/health",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/health"
+  },
+  {
+    "timestamp": "2026-04-25T11:19:22.697515",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/status",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/status"
+  },
+  {
+    "timestamp": "2026-04-25T11:19:24.785860",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/status",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/status"
+  },
+  {
+    "timestamp": "2026-04-25T11:19:26.903501",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/mood",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/mood"
+  },
+  {
+    "timestamp": "2026-04-25T11:19:29.001345",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mood",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/mood"
+  },
+  {
+    "timestamp": "2026-04-25T11:19:31.098560",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/rank",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/rank"
+  },
+  {
+    "timestamp": "2026-04-25T11:19:33.192334",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/rank",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/rank"
+  },
+  {
+    "timestamp": "2026-04-25T11:19:35.310511",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/inventory",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/inventory"
+  },
+  {
+    "timestamp": "2026-04-25T11:19:37.400402",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/inventory",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/inventory"
+  },
+  {
+    "timestamp": "2026-04-25T11:19:39.479892",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/chat",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/chat"
+  },
+  {
+    "timestamp": "2026-04-25T11:19:41.496673",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/chat",
+    "error": "Server disconnected without sending a response.",
+    "note": "post_/chat"
+  },
+  {
+    "timestamp": "2026-04-25T11:19:42.067241",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/talk",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/talk"
+  },
+  {
+    "timestamp": "2026-04-25T11:19:44.171358",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/talk",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/talk"
+  },
+  {
+    "timestamp": "2026-04-25T11:19:46.260049",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/help",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/help"
+  },
+  {
+    "timestamp": "2026-04-25T11:19:48.271418",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/help",
+    "error": "Server disconnected without sending a response.",
+    "note": "post_/help"
+  },
+  {
+    "timestamp": "2026-04-25T11:19:48.925463",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/version",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/version"
+  },
+  {
+    "timestamp": "2026-04-25T11:19:52.038523",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/version",
+    "error": "Server disconnected without sending a response.",
+    "note": "post_/version"
+  },
+  {
+    "timestamp": "2026-04-25T11:19:52.276090",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/config",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/config"
+  },
+  {
+    "timestamp": "2026-04-25T11:19:54.521967",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/config",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/config"
+  },
+  {
+    "timestamp": "2026-04-25T11:19:56.605004",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/debug",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/debug"
+  },
+  {
+    "timestamp": "2026-04-25T11:19:58.690835",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/debug",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/debug"
+  },
+  {
+    "timestamp": "2026-04-25T11:20:18.006890",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/hint",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/hint"
+  },
+  {
+    "timestamp": "2026-04-25T11:20:21.176171",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/hint",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/hint"
+  },
+  {
+    "timestamp": "2026-04-25T11:20:23.263164",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/recipe",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/recipe"
+  },
+  {
+    "timestamp": "2026-04-25T11:20:25.355318",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/recipe",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/recipe"
+  },
+  {
+    "timestamp": "2026-04-25T11:20:27.456625",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/about",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/about"
+  },
+  {
+    "timestamp": "2026-04-25T11:20:29.554315",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/about",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/about"
+  },
+  {
+    "timestamp": "2026-04-25T11:20:31.680443",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/api",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/api"
+  },
+  {
+    "timestamp": "2026-04-25T11:20:33.771154",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/api",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/api"
+  },
+  {
+    "timestamp": "2026-04-25T11:20:35.864939",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/swagger",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/swagger"
+  },
+  {
+    "timestamp": "2026-04-25T11:20:37.966908",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/swagger",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/swagger"
+  },
+  {
+    "timestamp": "2026-04-25T11:20:40.050256",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/docs",
+    "payload": null,
+    "status_code": 404,
+    "response": "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n<hr><center>nginx/1.29.6</center>\r\n</body>\r\n</html>\r\n",
+    "note": "get_/docs"
+  },
+  {
+    "timestamp": "2026-04-25T11:20:42.136600",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/docs",
+    "payload": {},
+    "status_code": 404,
+    "response": "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n<hr><center>nginx/1.29.6</center>\r\n</body>\r\n</html>\r\n",
+    "note": "post_/docs"
+  },
+  {
+    "timestamp": "2026-04-25T11:20:44.240019",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/info",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/info"
+  },
+  {
+    "timestamp": "2026-04-25T11:20:46.339644",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/info",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/info"
+  },
+  {
+    "timestamp": "2026-04-25T11:20:48.446390",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/state",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/state"
+  },
+  {
+    "timestamp": "2026-04-25T11:20:50.538812",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/state",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/state"
+  },
+  {
+    "timestamp": "2026-04-25T11:20:52.623326",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/settings",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/settings"
+  },
+  {
+    "timestamp": "2026-04-25T11:20:54.716290",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/settings",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/settings"
+  },
+  {
+    "timestamp": "2026-04-25T11:20:57.316830",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/tips",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/tips"
+  },
+  {
+    "timestamp": "2026-04-25T11:20:59.666396",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/tips",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/tips"
+  },
+  {
+    "timestamp": "2026-04-25T11:21:02.068645",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/achievements",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/achievements"
+  },
+  {
+    "timestamp": "2026-04-25T11:21:04.392744",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/achievements",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/achievements"
+  },
+  {
+    "timestamp": "2026-04-25T11:21:07.088582",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/leaderboard",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/leaderboard"
+  },
+  {
+    "timestamp": "2026-04-25T11:21:09.600609",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/leaderboard",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/leaderboard"
+  },
+  {
+    "timestamp": "2026-04-25T11:21:12.215237",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/daily",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/daily"
+  },
+  {
+    "timestamp": "2026-04-25T11:21:14.296575",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/daily",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/daily"
+  },
+  {
+    "timestamp": "2026-04-25T11:21:16.302829",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/bonus",
+    "error": "Server disconnected without sending a response.",
+    "note": "get_/bonus"
+  },
+  {
+    "timestamp": "2026-04-25T11:21:16.539408",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/bonus",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/bonus"
+  },
+  {
+    "timestamp": "2026-04-25T11:21:18.624633",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/gift",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/gift"
+  },
+  {
+    "timestamp": "2026-04-25T11:21:20.706823",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/gift",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/gift"
+  },
+  {
+    "timestamp": "2026-04-25T11:21:22.806128",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/surprise",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/surprise"
+  },
+  {
+    "timestamp": "2026-04-25T11:21:24.909842",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/surprise",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/surprise"
+  },
+  {
+    "timestamp": "2026-04-25T11:21:27.947795",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/bartender",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/bartender"
+  },
+  {
+    "timestamp": "2026-04-25T11:21:30.044989",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/bartender",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/bartender"
+  },
+  {
+    "timestamp": "2026-04-25T11:21:32.155798",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/mood/set",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/mood/set"
+  },
+  {
+    "timestamp": "2026-04-25T11:21:34.266459",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mood/set",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/mood/set"
+  },
+  {
+    "timestamp": "2026-04-25T11:21:36.363206",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/mood/get",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/mood/get"
+  },
+  {
+    "timestamp": "2026-04-25T11:21:39.492827",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mood/get",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/mood/get"
+  },
+  {
+    "timestamp": "2026-04-25T11:21:41.583116",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/reset",
+    "payload": null,
+    "status_code": 405,
+    "response": {
+      "detail": "Method Not Allowed"
+    },
+    "note": "get_/reset"
+  },
+  {
+    "timestamp": "2026-04-25T11:21:43.688934",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/reset",
+    "payload": {},
+    "status_code": 200,
+    "response": {
+      "status": "ok"
+    },
+    "note": "post_/reset"
+  },
+  {
+    "timestamp": "2026-04-25T11:21:45.790003",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/flush",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/flush"
+  },
+  {
+    "timestamp": "2026-04-25T11:21:47.876021",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/flush",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/flush"
+  },
+  {
+    "timestamp": "2026-04-25T11:21:49.986641",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/cache",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/cache"
+  },
+  {
+    "timestamp": "2026-04-25T11:21:52.074922",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/cache",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/cache"
+  },
+  {
+    "timestamp": "2026-04-25T11:21:54.089974",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/stats",
+    "error": "Server disconnected without sending a response.",
+    "note": "get_/stats"
+  },
+  {
+    "timestamp": "2026-04-25T11:21:55.476853",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/stats",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/stats"
+  },
+  {
+    "timestamp": "2026-04-25T11:21:58.175941",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/flag",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/flag"
+  },
+  {
+    "timestamp": "2026-04-25T11:22:00.790104",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/flag",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/flag"
+  },
+  {
+    "timestamp": "2026-04-25T11:22:03.076554",
+    "account_id": "BAR-0391",
+    "method": "GET",
+    "path": "/key",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/key"
+  },
+  {
+    "timestamp": "2026-04-25T11:22:05.176209",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/key",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/key"
+  },
+  {
+    "timestamp": "2026-04-25T11:22:07.275950",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "водка",
+        "ром"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 100,
+      "mood_level": "normal"
+    },
+    "note": "mix_водка_ром"
+  },
+  {
+    "timestamp": "2026-04-25T11:22:09.845462",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "водка",
+        "текила"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 100,
+      "mood_level": "normal"
+    },
+    "note": "mix_водка_текила"
+  },
+  {
+    "timestamp": "2026-04-25T11:22:11.946024",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "водка",
+        "виски"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 100,
+      "mood_level": "grumpy"
+    },
+    "note": "mix_водка_виски"
+  },
+  {
+    "timestamp": "2026-04-25T11:22:14.135765",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "водка",
+        "джин"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 100,
+      "mood_level": "grumpy"
+    },
+    "note": "mix_водка_джин"
+  },
+  {
+    "timestamp": "2026-04-25T11:22:16.422035",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "водка",
+        "кола"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 100,
+      "mood_level": "grumpy"
+    },
+    "note": "mix_водка_кола"
+  },
+  {
+    "timestamp": "2026-04-25T11:22:18.504385",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "error": "Server disconnected without sending a response.",
+    "note": "mix_водка_сок"
+  },
+  {
+    "timestamp": "2026-04-25T11:22:19.449401",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "водка",
+        "тоник"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 100,
+      "mood_level": "grumpy"
+    },
+    "note": "mix_водка_тоник"
+  },
+  {
+    "timestamp": "2026-04-25T11:22:21.564305",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "водка",
+        "лёд"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drink": "Русский",
+      "price": 10,
+      "balance": 90,
+      "mood_level": "hostile"
+    },
+    "note": "mix_водка_лёд"
+  },
+  {
+    "timestamp": "2026-04-25T11:22:25.049051",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "водка",
+        "молоко"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 90,
+      "mood_level": "hostile"
+    },
+    "note": "mix_водка_молоко"
+  },
+  {
+    "timestamp": "2026-04-25T11:22:28.168463",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "ром",
+        "текила"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 90,
+      "mood_level": "hostile"
+    },
+    "note": "mix_ром_текила"
+  },
+  {
+    "timestamp": "2026-04-25T11:22:30.171820",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "error": "Server disconnected without sending a response.",
+    "note": "mix_ром_виски"
+  },
+  {
+    "timestamp": "2026-04-25T11:22:30.616546",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "ром",
+        "джин"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 90,
+      "mood_level": "hostile"
+    },
+    "note": "mix_ром_джин"
+  },
+  {
+    "timestamp": "2026-04-25T11:22:32.744857",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "ром",
+        "кола"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 90,
+      "mood_level": "hostile"
+    },
+    "note": "mix_ром_кола"
+  },
+  {
+    "timestamp": "2026-04-25T11:22:35.122548",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "ром",
+        "сок"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 90,
+      "mood_level": "hostile"
+    },
+    "note": "mix_ром_сок"
+  },
+  {
+    "timestamp": "2026-04-25T11:22:37.218006",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "ром",
+        "тоник"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 90,
+      "mood_level": "hostile"
+    },
+    "note": "mix_ром_тоник"
+  },
+  {
+    "timestamp": "2026-04-25T11:22:39.225618",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "error": "Server disconnected without sending a response.",
+    "note": "mix_ром_лёд"
+  },
+  {
+    "timestamp": "2026-04-25T11:22:41.223169",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "ром",
+        "молоко"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 90,
+      "mood_level": "hostile"
+    },
+    "note": "mix_ром_молоко"
+  },
+  {
+    "timestamp": "2026-04-25T11:22:43.234534",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "error": "Server disconnected without sending a response.",
+    "note": "mix_текила_виски"
+  },
+  {
+    "timestamp": "2026-04-25T11:22:45.483322",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "текила",
+        "джин"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 90,
+      "mood_level": "hostile"
+    },
+    "note": "mix_текила_джин"
+  },
+  {
+    "timestamp": "2026-04-25T11:22:47.580683",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "текила",
+        "кола"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 90,
+      "mood_level": "hostile"
+    },
+    "note": "mix_текила_кола"
+  },
+  {
+    "timestamp": "2026-04-25T11:22:49.693067",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "текила",
+        "сок"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drink": "Текила-санрайз",
+      "price": 18,
+      "balance": 72,
+      "mood_level": "hostile"
+    },
+    "note": "mix_текила_сок"
+  },
+  {
+    "timestamp": "2026-04-25T11:22:51.807697",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "текила",
+        "тоник"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 72,
+      "mood_level": "hostile"
+    },
+    "note": "mix_текила_тоник"
+  },
+  {
+    "timestamp": "2026-04-25T11:22:53.909644",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "текила",
+        "лёд"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 72,
+      "mood_level": "hostile"
+    },
+    "note": "mix_текила_лёд"
+  },
+  {
+    "timestamp": "2026-04-25T11:22:55.917169",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "error": "Server disconnected without sending a response.",
+    "note": "mix_текила_молоко"
+  },
+  {
+    "timestamp": "2026-04-25T11:22:57.047866",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "виски",
+        "джин"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 72,
+      "mood_level": "hostile"
+    },
+    "note": "mix_виски_джин"
+  },
+  {
+    "timestamp": "2026-04-25T11:22:59.182982",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "виски",
+        "кола"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drink": "Виски-кола",
+      "price": 17,
+      "balance": 55,
+      "mood_level": "hostile"
+    },
+    "note": "mix_виски_кола"
+  },
+  {
+    "timestamp": "2026-04-25T11:23:01.290661",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "виски",
+        "сок"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 55,
+      "mood_level": "hostile"
+    },
+    "note": "mix_виски_сок"
+  },
+  {
+    "timestamp": "2026-04-25T11:23:03.383326",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "виски",
+        "тоник"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 55,
+      "mood_level": "hostile"
+    },
+    "note": "mix_виски_тоник"
+  },
+  {
+    "timestamp": "2026-04-25T11:23:06.799284",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "error": "Server disconnected without sending a response.",
+    "note": "mix_виски_лёд"
+  },
+  {
+    "timestamp": "2026-04-25T11:23:23.248285",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "виски",
+        "молоко"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 55,
+      "mood_level": "hostile"
+    },
+    "note": "mix_виски_молоко"
+  },
+  {
+    "timestamp": "2026-04-25T11:23:26.288336",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "джин",
+        "кола"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 55,
+      "mood_level": "hostile"
+    },
+    "note": "mix_джин_кола"
+  },
+  {
+    "timestamp": "2026-04-25T11:23:29.540908",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "error": "Server disconnected without sending a response.",
+    "note": "mix_джин_сок"
+  },
+  {
+    "timestamp": "2026-04-25T11:23:30.664634",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "джин",
+        "тоник"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 55,
+      "mood_level": "hostile"
+    },
+    "note": "mix_джин_тоник"
+  },
+  {
+    "timestamp": "2026-04-25T11:23:32.783008",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "джин",
+        "лёд"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 55,
+      "mood_level": "hostile"
+    },
+    "note": "mix_джин_лёд"
+  },
+  {
+    "timestamp": "2026-04-25T11:23:34.869975",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "джин",
+        "молоко"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 55,
+      "mood_level": "hostile"
+    },
+    "note": "mix_джин_молоко"
+  },
+  {
+    "timestamp": "2026-04-25T11:23:36.973855",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "кола",
+        "сок"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 55,
+      "mood_level": "hostile"
+    },
+    "note": "mix_кола_сок"
+  },
+  {
+    "timestamp": "2026-04-25T11:23:39.097147",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "кола",
+        "тоник"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 55,
+      "mood_level": "hostile"
+    },
+    "note": "mix_кола_тоник"
+  },
+  {
+    "timestamp": "2026-04-25T11:23:41.222780",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "кола",
+        "лёд"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 55,
+      "mood_level": "hostile"
+    },
+    "note": "mix_кола_лёд"
+  },
+  {
+    "timestamp": "2026-04-25T11:23:43.324397",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "кола",
+        "молоко"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 55,
+      "mood_level": "hostile"
+    },
+    "note": "mix_кола_молоко"
+  },
+  {
+    "timestamp": "2026-04-25T11:23:45.412120",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "сок",
+        "тоник"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 55,
+      "mood_level": "hostile"
+    },
+    "note": "mix_сок_тоник"
+  },
+  {
+    "timestamp": "2026-04-25T11:23:47.509144",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "сок",
+        "лёд"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 55,
+      "mood_level": "hostile"
+    },
+    "note": "mix_сок_лёд"
+  },
+  {
+    "timestamp": "2026-04-25T11:23:49.620703",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "сок",
+        "молоко"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 55,
+      "mood_level": "hostile"
+    },
+    "note": "mix_сок_молоко"
+  },
+  {
+    "timestamp": "2026-04-25T11:23:51.730808",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "тоник",
+        "лёд"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 55,
+      "mood_level": "hostile"
+    },
+    "note": "mix_тоник_лёд"
+  },
+  {
+    "timestamp": "2026-04-25T11:23:53.840688",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "тоник",
+        "молоко"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 55,
+      "mood_level": "hostile"
+    },
+    "note": "mix_тоник_молоко"
+  },
+  {
+    "timestamp": "2026-04-25T11:23:55.935797",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "лёд",
+        "молоко"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 55,
+      "mood_level": "hostile"
+    },
+    "note": "mix_лёд_молоко"
+  },
+  {
+    "timestamp": "2026-04-25T11:23:58.056532",
+    "account_id": "BAR-0391",
+    "method": "POST",
+    "path": "/reset",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok"
+    },
+    "note": "cleanup"
+  },
+  {
+    "timestamp": "2026-04-25T11:24:00.141322",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/menu",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drinks": [
+        {
+          "name": "Куба Либре",
+          "price": 15,
+          "ingredients": [
+            "кола",
+            "лёд",
+            "ром"
+          ]
+        },
+        {
+          "name": "Отвёртка",
+          "price": 12,
+          "ingredients": [
+            "водка",
+            "сок"
+          ]
+        },
+        {
+          "name": "Джин-тоник",
+          "price": 14,
+          "ingredients": [
+            "джин",
+            "лёд",
+            "тоник"
+          ]
+        },
+        {
+          "name": "Виски-кола",
+          "price": 13,
+          "ingredients": [
+            "виски",
+            "кола"
+          ]
+        },
+        {
+          "name": "Текила-санрайз",
+          "price": 14,
+          "ingredients": [
+            "сок",
+            "текила"
+          ]
+        },
+        {
+          "name": "Русский",
+          "price": 10,
+          "ingredients": [
+            "водка",
+            "лёд"
+          ]
+        },
+        {
+          "name": "Белый русский",
+          "price": 16,
+          "ingredients": [
+            "водка",
+            "лёд",
+            "молоко"
+          ]
+        },
+        {
+          "name": "Лонг-Айленд",
+          "price": 25,
+          "ingredients": [
+            "водка",
+            "джин",
+            "кола",
+            "ром",
+            "текила"
+          ]
+        }
+      ],
+      "balance": 100,
+      "mood_level": "normal"
+    },
+    "note": "menu_day"
+  },
+  {
+    "timestamp": "2026-04-25T11:24:02.248266",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/order",
+    "payload": {
+      "name": "Русский"
+    },
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drink": "Русский",
+      "price": 10,
+      "balance": 90,
+      "mood_level": "normal"
+    },
+    "note": "order_стандарт"
+  },
+  {
+    "timestamp": "2026-04-25T11:24:04.368120",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "водка",
+        "лёд"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drink": "Русский",
+      "price": 8,
+      "balance": 82,
+      "mood_level": "normal"
+    },
+    "note": "mix_стандарт"
+  },
+  {
+    "timestamp": "2026-04-25T11:24:06.460367",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/balance",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "balance": 82,
+      "mood_level": "normal"
+    },
+    "note": "balance"
+  },
+  {
+    "timestamp": "2026-04-25T11:24:08.575277",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/tip",
+    "payload": {
+      "amount": 5
+    },
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "tip": 5,
+      "balance": 77,
+      "mood_level": "normal"
+    },
+    "note": "tip_5"
+  },
+  {
+    "timestamp": "2026-04-25T11:24:10.670342",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/history",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "orders": [
+        {
+          "drink": "Русский",
+          "price": 10,
+          "method": "order"
+        },
+        {
+          "drink": "Русский",
+          "price": 8,
+          "method": "mix"
+        }
+      ],
+      "balance": 77,
+      "mood_level": "normal"
+    },
+    "note": "history"
+  },
+  {
+    "timestamp": "2026-04-25T11:24:12.751675",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/profile",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "id": "BAR-0392",
+      "rank": "Новичок",
+      "total_orders": 2,
+      "unique_drinks": 1,
+      "favorite_drink": null,
+      "bar_closed": false
+    },
+    "note": "profile"
+  },
+  {
+    "timestamp": "2026-04-25T11:24:14.762398",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/menu",
+    "error": "Server disconnected without sending a response.",
+    "note": "menu_00:00"
+  },
+  {
+    "timestamp": "2026-04-25T11:24:15.511114",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/order",
+    "payload": {
+      "name": "Русский"
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 77,
+      "mood_level": "normal"
+    },
+    "note": "order_00:00"
+  },
+  {
+    "timestamp": "2026-04-25T11:24:17.602969",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/menu",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drinks": [
+        {
+          "name": "Куба Либре",
+          "price": 15,
+          "ingredients": [
+            "кола",
+            "лёд",
+            "ром"
+          ]
+        },
+        {
+          "name": "Отвёртка",
+          "price": 12,
+          "ingredients": [
+            "водка",
+            "сок"
+          ]
+        },
+        {
+          "name": "Джин-тоник",
+          "price": 14,
+          "ingredients": [
+            "джин",
+            "лёд",
+            "тоник"
+          ]
+        },
+        {
+          "name": "Виски-кола",
+          "price": 13,
+          "ingredients": [
+            "виски",
+            "кола"
+          ]
+        },
+        {
+          "name": "Текила-санрайз",
+          "price": 14,
+          "ingredients": [
+            "сок",
+            "текила"
+          ]
+        },
+        {
+          "name": "Русский",
+          "price": 10,
+          "ingredients": [
+            "водка",
+            "лёд"
+          ]
+        },
+        {
+          "name": "Белый русский",
+          "price": 16,
+          "ingredients": [
+            "водка",
+            "лёд",
+            "молоко"
+          ]
+        },
+        {
+          "name": "Лонг-Айленд",
+          "price": 25,
+          "ingredients": [
+            "водка",
+            "джин",
+            "кола",
+            "ром",
+            "текила"
+          ]
+        }
+      ],
+      "balance": 77,
+      "mood_level": "normal"
+    },
+    "note": "menu_06:00"
+  },
+  {
+    "timestamp": "2026-04-25T11:24:19.613141",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/order",
+    "error": "Server disconnected without sending a response.",
+    "note": "order_06:00"
+  },
+  {
+    "timestamp": "2026-04-25T11:24:20.112336",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/menu",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drinks": [
+        {
+          "name": "Куба Либре",
+          "price": 15,
+          "ingredients": [
+            "кола",
+            "лёд",
+            "ром"
+          ]
+        },
+        {
+          "name": "Отвёртка",
+          "price": 12,
+          "ingredients": [
+            "водка",
+            "сок"
+          ]
+        },
+        {
+          "name": "Джин-тоник",
+          "price": 14,
+          "ingredients": [
+            "джин",
+            "лёд",
+            "тоник"
+          ]
+        },
+        {
+          "name": "Виски-кола",
+          "price": 13,
+          "ingredients": [
+            "виски",
+            "кола"
+          ]
+        },
+        {
+          "name": "Текила-санрайз",
+          "price": 14,
+          "ingredients": [
+            "сок",
+            "текила"
+          ]
+        },
+        {
+          "name": "Русский",
+          "price": 10,
+          "ingredients": [
+            "водка",
+            "лёд"
+          ]
+        },
+        {
+          "name": "Белый русский",
+          "price": 16,
+          "ingredients": [
+            "водка",
+            "лёд",
+            "молоко"
+          ]
+        },
+        {
+          "name": "Лонг-Айленд",
+          "price": 25,
+          "ingredients": [
+            "водка",
+            "джин",
+            "кола",
+            "ром",
+            "текила"
+          ]
+        }
+      ],
+      "balance": 77,
+      "mood_level": "normal"
+    },
+    "note": "menu_12:00"
+  },
+  {
+    "timestamp": "2026-04-25T11:24:22.118339",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/order",
+    "error": "Server disconnected without sending a response.",
+    "note": "order_12:00"
+  },
+  {
+    "timestamp": "2026-04-25T11:24:22.353166",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/menu",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drinks": [
+        {
+          "name": "Куба Либре",
+          "price": 15,
+          "ingredients": [
+            "кола",
+            "лёд",
+            "ром"
+          ]
+        },
+        {
+          "name": "Отвёртка",
+          "price": 12,
+          "ingredients": [
+            "водка",
+            "сок"
+          ]
+        },
+        {
+          "name": "Джин-тоник",
+          "price": 14,
+          "ingredients": [
+            "джин",
+            "лёд",
+            "тоник"
+          ]
+        },
+        {
+          "name": "Виски-кола",
+          "price": 13,
+          "ingredients": [
+            "виски",
+            "кола"
+          ]
+        },
+        {
+          "name": "Текила-санрайз",
+          "price": 14,
+          "ingredients": [
+            "сок",
+            "текила"
+          ]
+        },
+        {
+          "name": "Русский",
+          "price": 10,
+          "ingredients": [
+            "водка",
+            "лёд"
+          ]
+        },
+        {
+          "name": "Белый русский",
+          "price": 16,
+          "ingredients": [
+            "водка",
+            "лёд",
+            "молоко"
+          ]
+        },
+        {
+          "name": "Лонг-Айленд",
+          "price": 25,
+          "ingredients": [
+            "водка",
+            "джин",
+            "кола",
+            "ром",
+            "текила"
+          ]
+        }
+      ],
+      "balance": 77,
+      "mood_level": "normal"
+    },
+    "note": "menu_18:00"
+  },
+  {
+    "timestamp": "2026-04-25T11:24:24.936317",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/order",
+    "payload": {
+      "name": "Русский"
+    },
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drink": "Русский",
+      "price": 10,
+      "balance": 67,
+      "mood_level": "normal"
+    },
+    "note": "order_18:00"
+  },
+  {
+    "timestamp": "2026-04-25T11:24:27.280742",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/menu",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drinks": [
+        {
+          "name": "Куба Либре",
+          "price": 15,
+          "ingredients": [
+            "кола",
+            "лёд",
+            "ром"
+          ]
+        },
+        {
+          "name": "Отвёртка",
+          "price": 12,
+          "ingredients": [
+            "водка",
+            "сок"
+          ]
+        },
+        {
+          "name": "Джин-тоник",
+          "price": 14,
+          "ingredients": [
+            "джин",
+            "лёд",
+            "тоник"
+          ]
+        },
+        {
+          "name": "Виски-кола",
+          "price": 13,
+          "ingredients": [
+            "виски",
+            "кола"
+          ]
+        },
+        {
+          "name": "Текила-санрайз",
+          "price": 14,
+          "ingredients": [
+            "сок",
+            "текила"
+          ]
+        },
+        {
+          "name": "Русский",
+          "price": 7,
+          "ingredients": [
+            "водка",
+            "лёд"
+          ]
+        },
+        {
+          "name": "Белый русский",
+          "price": 16,
+          "ingredients": [
+            "водка",
+            "лёд",
+            "молоко"
+          ]
+        },
+        {
+          "name": "Лонг-Айленд",
+          "price": 25,
+          "ingredients": [
+            "водка",
+            "джин",
+            "кола",
+            "ром",
+            "текила"
+          ]
+        }
+      ],
+      "balance": 67,
+      "mood_level": "normal"
+    },
+    "note": "menu_23:59"
+  },
+  {
+    "timestamp": "2026-04-25T11:24:29.292679",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/order",
+    "error": "Server disconnected without sending a response.",
+    "note": "order_23:59"
+  },
+  {
+    "timestamp": "2026-04-25T11:24:30.609983",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/menu",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drinks": [
+        {
+          "name": "Ночной русский",
+          "price": 8,
+          "ingredients": [
+            "водка",
+            "лёд",
+            "молоко"
+          ]
+        },
+        {
+          "name": "Бессонница",
+          "price": 10,
+          "ingredients": [
+            "кола",
+            "ром",
+            "тоник"
+          ]
+        },
+        {
+          "name": "Лунный свет",
+          "price": 12,
+          "ingredients": [
+            "джин",
+            "сок",
+            "тоник"
+          ]
+        }
+      ],
+      "balance": 67,
+      "mood_level": "normal"
+    },
+    "note": "menu_24:00"
+  },
+  {
+    "timestamp": "2026-04-25T11:24:32.709668",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/order",
+    "payload": {
+      "name": "Русский"
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 67,
+      "mood_level": "normal"
+    },
+    "note": "order_24:00"
+  },
+  {
+    "timestamp": "2026-04-25T11:24:36.008226",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/menu",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drinks": [
+        {
+          "name": "Куба Либре",
+          "price": 15,
+          "ingredients": [
+            "кола",
+            "лёд",
+            "ром"
+          ]
+        },
+        {
+          "name": "Отвёртка",
+          "price": 12,
+          "ingredients": [
+            "водка",
+            "сок"
+          ]
+        },
+        {
+          "name": "Джин-тоник",
+          "price": 14,
+          "ingredients": [
+            "джин",
+            "лёд",
+            "тоник"
+          ]
+        },
+        {
+          "name": "Виски-кола",
+          "price": 13,
+          "ingredients": [
+            "виски",
+            "кола"
+          ]
+        },
+        {
+          "name": "Текила-санрайз",
+          "price": 14,
+          "ingredients": [
+            "сок",
+            "текила"
+          ]
+        },
+        {
+          "name": "Русский",
+          "price": 7,
+          "ingredients": [
+            "водка",
+            "лёд"
+          ]
+        },
+        {
+          "name": "Белый русский",
+          "price": 16,
+          "ingredients": [
+            "водка",
+            "лёд",
+            "молоко"
+          ]
+        },
+        {
+          "name": "Лонг-Айленд",
+          "price": 25,
+          "ingredients": [
+            "водка",
+            "джин",
+            "кола",
+            "ром",
+            "текила"
+          ]
+        }
+      ],
+      "balance": 67,
+      "mood_level": "normal"
+    },
+    "note": "menu_13:60"
+  },
+  {
+    "timestamp": "2026-04-25T11:24:38.133758",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/order",
+    "payload": {
+      "name": "Русский"
+    },
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drink": "Русский",
+      "price": 7,
+      "favorite": true,
+      "balance": 60,
+      "mood_level": "grumpy"
+    },
+    "note": "order_13:60"
+  },
+  {
+    "timestamp": "2026-04-25T11:24:40.321131",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/menu",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drinks": [
+        {
+          "name": "Куба Либре",
+          "price": 18,
+          "ingredients": [
+            "кола",
+            "лёд",
+            "ром"
+          ]
+        },
+        {
+          "name": "Отвёртка",
+          "price": 15,
+          "ingredients": [
+            "водка",
+            "сок"
+          ]
+        },
+        {
+          "name": "Джин-тоник",
+          "price": 17,
+          "ingredients": [
+            "джин",
+            "лёд",
+            "тоник"
+          ]
+        },
+        {
+          "name": "Виски-кола",
+          "price": 16,
+          "ingredients": [
+            "виски",
+            "кола"
+          ]
+        },
+        {
+          "name": "Текила-санрайз",
+          "price": 17,
+          "ingredients": [
+            "сок",
+            "текила"
+          ]
+        },
+        {
+          "name": "Русский",
+          "price": 9,
+          "ingredients": [
+            "водка",
+            "лёд"
+          ]
+        },
+        {
+          "name": "Белый русский",
+          "price": 20,
+          "ingredients": [
+            "водка",
+            "лёд",
+            "молоко"
+          ]
+        },
+        {
+          "name": "Лонг-Айленд",
+          "price": 30,
+          "ingredients": [
+            "водка",
+            "джин",
+            "кола",
+            "ром",
+            "текила"
+          ]
+        }
+      ],
+      "balance": 60,
+      "mood_level": "grumpy"
+    },
+    "note": "menu_foo"
+  },
+  {
+    "timestamp": "2026-04-25T11:24:42.478664",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/order",
+    "payload": {
+      "name": "Русский"
+    },
+    "status_code": 200,
+    "response": {
+      "status": "prompt",
+      "prompt": "repeat_check",
+      "balance": 60,
+      "mood_level": "grumpy"
+    },
+    "note": "order_foo"
+  },
+  {
+    "timestamp": "2026-04-25T11:24:44.586969",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/menu",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drinks": [
+        {
+          "name": "Куба Либре",
+          "price": 18,
+          "ingredients": [
+            "кола",
+            "лёд",
+            "ром"
+          ]
+        },
+        {
+          "name": "Отвёртка",
+          "price": 15,
+          "ingredients": [
+            "водка",
+            "сок"
+          ]
+        },
+        {
+          "name": "Джин-тоник",
+          "price": 17,
+          "ingredients": [
+            "джин",
+            "лёд",
+            "тоник"
+          ]
+        },
+        {
+          "name": "Виски-кола",
+          "price": 16,
+          "ingredients": [
+            "виски",
+            "кола"
+          ]
+        },
+        {
+          "name": "Текила-санрайз",
+          "price": 17,
+          "ingredients": [
+            "сок",
+            "текила"
+          ]
+        },
+        {
+          "name": "Русский",
+          "price": 9,
+          "ingredients": [
+            "водка",
+            "лёд"
+          ]
+        },
+        {
+          "name": "Белый русский",
+          "price": 20,
+          "ingredients": [
+            "водка",
+            "лёд",
+            "молоко"
+          ]
+        },
+        {
+          "name": "Лонг-Айленд",
+          "price": 30,
+          "ingredients": [
+            "водка",
+            "джин",
+            "кола",
+            "ром",
+            "текила"
+          ]
+        }
+      ],
+      "balance": 60,
+      "mood_level": "grumpy"
+    },
+    "note": "menu_no_time"
+  },
+  {
+    "timestamp": "2026-04-25T11:24:46.689733",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/order",
+    "payload": {
+      "name": "Русский"
+    },
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drink": "Русский",
+      "price": 9,
+      "favorite": true,
+      "balance": 51,
+      "mood_level": "grumpy"
+    },
+    "note": "order_no_time"
+  },
+  {
+    "timestamp": "2026-04-25T11:24:48.836371",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/menu",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drinks": [
+        {
+          "name": "Ночной русский",
+          "price": 10,
+          "ingredients": [
+            "водка",
+            "лёд",
+            "молоко"
+          ]
+        },
+        {
+          "name": "Бессонница",
+          "price": 12,
+          "ingredients": [
+            "кола",
+            "ром",
+            "тоник"
+          ]
+        },
+        {
+          "name": "Лунный свет",
+          "price": 15,
+          "ingredients": [
+            "джин",
+            "сок",
+            "тоник"
+          ]
+        }
+      ],
+      "balance": 51,
+      "mood_level": "grumpy"
+    },
+    "note": "menu_00:01"
+  },
+  {
+    "timestamp": "2026-04-25T11:24:50.933076",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/order",
+    "payload": {
+      "name": "Русский"
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 51,
+      "mood_level": "grumpy"
+    },
+    "note": "order_00:01"
+  },
+  {
+    "timestamp": "2026-04-25T11:24:53.028584",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/menu",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drinks": [
+        {
+          "name": "Ночной русский",
+          "price": 10,
+          "ingredients": [
+            "водка",
+            "лёд",
+            "молоко"
+          ]
+        },
+        {
+          "name": "Бессонница",
+          "price": 12,
+          "ingredients": [
+            "кола",
+            "ром",
+            "тоник"
+          ]
+        },
+        {
+          "name": "Лунный свет",
+          "price": 15,
+          "ingredients": [
+            "джин",
+            "сок",
+            "тоник"
+          ]
+        }
+      ],
+      "balance": 51,
+      "mood_level": "grumpy"
+    },
+    "note": "menu_05:59"
+  },
+  {
+    "timestamp": "2026-04-25T11:24:55.131617",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/order",
+    "payload": {
+      "name": "Русский"
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 51,
+      "mood_level": "grumpy"
+    },
+    "note": "order_05:59"
+  },
+  {
+    "timestamp": "2026-04-25T11:24:57.225887",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/order",
+    "payload": {
+      "name": ""
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 51,
+      "mood_level": "grumpy"
+    },
+    "note": "empty_order"
+  },
+  {
+    "timestamp": "2026-04-25T11:24:59.334553",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/order",
+    "payload": {
+      "drink": "Русский"
+    },
+    "status_code": 422,
+    "response": {
+      "detail": [
+        {
+          "type": "missing",
+          "loc": [
+            "body",
+            "name"
+          ],
+          "msg": "Field required",
+          "input": {
+            "drink": "Русский"
+          }
+        }
+      ]
+    },
+    "note": "wrong_key_order"
+  },
+  {
+    "timestamp": "2026-04-25T11:25:01.470154",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": []
+    },
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drink": "Воздух",
+      "price": 0,
+      "balance": 51,
+      "mood_level": "grumpy"
+    },
+    "note": "empty_mix"
+  },
+  {
+    "timestamp": "2026-04-25T11:25:03.574378",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/tip",
+    "payload": {
+      "amount": -10
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "invalid_amount",
+      "balance": 51,
+      "mood_level": "grumpy"
+    },
+    "note": "negative_tip"
+  },
+  {
+    "timestamp": "2026-04-25T11:25:05.675654",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/tip",
+    "payload": {
+      "amount": 0
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "invalid_amount",
+      "balance": 51,
+      "mood_level": "grumpy"
+    },
+    "note": "zero_tip"
+  },
+  {
+    "timestamp": "2026-04-25T11:25:08.691382",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/tip",
+    "payload": {
+      "amount": 9999
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "insufficient_funds",
+      "balance": 51,
+      "mood_level": "grumpy"
+    },
+    "note": "huge_tip"
+  },
+  {
+    "timestamp": "2026-04-25T11:25:10.789346",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/order",
+    "payload": {
+      "ingredients": [
+        "водка",
+        "лёд"
+      ]
+    },
+    "status_code": 422,
+    "response": {
+      "detail": [
+        {
+          "type": "missing",
+          "loc": [
+            "body",
+            "name"
+          ],
+          "msg": "Field required",
+          "input": {
+            "ingredients": [
+              "водка",
+              "лёд"
+            ]
+          }
+        }
+      ]
+    },
+    "note": "order_as_mix"
+  },
+  {
+    "timestamp": "2026-04-25T11:25:12.884488",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "name": "Русский"
+    },
+    "status_code": 422,
+    "response": {
+      "detail": [
+        {
+          "type": "missing",
+          "loc": [
+            "body",
+            "ingredients"
+          ],
+          "msg": "Field required",
+          "input": {
+            "name": "Русский"
+          }
+        }
+      ]
+    },
+    "note": "mix_as_order"
+  },
+  {
+    "account_id": "NO_AUTH",
+    "method": "GET",
+    "path": "/menu",
+    "status_code": 401,
+    "response": {
+      "detail": {
+        "status": "error",
+        "error": "unauthorized"
+      }
+    },
+    "note": "unauth_menu"
+  },
+  {
+    "timestamp": "2026-04-25T11:25:15.048708",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/secret",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "not_found"
+    },
+    "note": "get_/secret"
+  },
+  {
+    "timestamp": "2026-04-25T11:25:17.129075",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/secret",
+    "payload": {},
+    "status_code": 405,
+    "response": {
+      "detail": "Method Not Allowed"
+    },
+    "note": "post_/secret"
+  },
+  {
+    "timestamp": "2026-04-25T11:25:19.218221",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/admin",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/admin"
+  },
+  {
+    "timestamp": "2026-04-25T11:25:21.318570",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/admin",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/admin"
+  },
+  {
+    "timestamp": "2026-04-25T11:25:23.429895",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/health",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/health"
+  },
+  {
+    "timestamp": "2026-04-25T11:25:25.537980",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/health",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/health"
+  },
+  {
+    "timestamp": "2026-04-25T11:25:27.639510",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/status",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/status"
+  },
+  {
+    "timestamp": "2026-04-25T11:25:29.741793",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/status",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/status"
+  },
+  {
+    "timestamp": "2026-04-25T11:25:31.841026",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/mood",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/mood"
+  },
+  {
+    "timestamp": "2026-04-25T11:25:33.925352",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mood",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/mood"
+  },
+  {
+    "timestamp": "2026-04-25T11:25:36.132689",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/rank",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/rank"
+  },
+  {
+    "timestamp": "2026-04-25T11:25:38.233661",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/rank",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/rank"
+  },
+  {
+    "timestamp": "2026-04-25T11:25:40.330246",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/inventory",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/inventory"
+  },
+  {
+    "timestamp": "2026-04-25T11:25:42.485374",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/inventory",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/inventory"
+  },
+  {
+    "timestamp": "2026-04-25T11:25:44.565103",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/chat",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/chat"
+  },
+  {
+    "timestamp": "2026-04-25T11:25:46.653493",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/chat",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/chat"
+  },
+  {
+    "timestamp": "2026-04-25T11:25:48.755761",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/talk",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/talk"
+  },
+  {
+    "timestamp": "2026-04-25T11:25:50.874572",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/talk",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/talk"
+  },
+  {
+    "timestamp": "2026-04-25T11:25:52.960984",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/help",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/help"
+  },
+  {
+    "timestamp": "2026-04-25T11:25:55.069496",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/help",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/help"
+  },
+  {
+    "timestamp": "2026-04-25T11:25:57.150471",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/version",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/version"
+  },
+  {
+    "timestamp": "2026-04-25T11:25:59.246790",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/version",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/version"
+  },
+  {
+    "timestamp": "2026-04-25T11:26:01.362327",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/config",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/config"
+  },
+  {
+    "timestamp": "2026-04-25T11:26:03.470561",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/config",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/config"
+  },
+  {
+    "timestamp": "2026-04-25T11:26:05.598149",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/debug",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/debug"
+  },
+  {
+    "timestamp": "2026-04-25T11:26:07.714487",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/debug",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/debug"
+  },
+  {
+    "timestamp": "2026-04-25T11:26:09.816289",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/hint",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/hint"
+  },
+  {
+    "timestamp": "2026-04-25T11:26:11.904432",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/hint",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/hint"
+  },
+  {
+    "timestamp": "2026-04-25T11:26:13.917036",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/recipe",
+    "error": "Server disconnected without sending a response.",
+    "note": "get_/recipe"
+  },
+  {
+    "timestamp": "2026-04-25T11:26:14.300978",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/recipe",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/recipe"
+  },
+  {
+    "timestamp": "2026-04-25T11:26:16.309836",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/about",
+    "error": "Server disconnected without sending a response.",
+    "note": "get_/about"
+  },
+  {
+    "timestamp": "2026-04-25T11:26:16.561990",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/about",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/about"
+  },
+  {
+    "timestamp": "2026-04-25T11:26:18.806855",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/api",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/api"
+  },
+  {
+    "timestamp": "2026-04-25T11:26:21.073307",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/api",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/api"
+  },
+  {
+    "timestamp": "2026-04-25T11:26:23.351971",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/swagger",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/swagger"
+  },
+  {
+    "timestamp": "2026-04-25T11:26:25.363477",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/swagger",
+    "error": "Server disconnected without sending a response.",
+    "note": "post_/swagger"
+  },
+  {
+    "timestamp": "2026-04-25T11:26:25.686846",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/docs",
+    "payload": null,
+    "status_code": 404,
+    "response": "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n<hr><center>nginx/1.29.6</center>\r\n</body>\r\n</html>\r\n",
+    "note": "get_/docs"
+  },
+  {
+    "timestamp": "2026-04-25T11:26:28.079866",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/docs",
+    "payload": {},
+    "status_code": 404,
+    "response": "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n<hr><center>nginx/1.29.6</center>\r\n</body>\r\n</html>\r\n",
+    "note": "post_/docs"
+  },
+  {
+    "timestamp": "2026-04-25T11:26:30.382948",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/info",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/info"
+  },
+  {
+    "timestamp": "2026-04-25T11:26:32.698706",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/info",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/info"
+  },
+  {
+    "timestamp": "2026-04-25T11:26:35.021174",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/state",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/state"
+  },
+  {
+    "timestamp": "2026-04-25T11:26:37.276257",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/state",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/state"
+  },
+  {
+    "timestamp": "2026-04-25T11:26:39.595860",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/settings",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/settings"
+  },
+  {
+    "timestamp": "2026-04-25T11:26:41.864903",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/settings",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/settings"
+  },
+  {
+    "timestamp": "2026-04-25T11:26:44.278018",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/tips",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/tips"
+  },
+  {
+    "timestamp": "2026-04-25T11:26:46.726825",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/tips",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/tips"
+  },
+  {
+    "timestamp": "2026-04-25T11:26:50.108745",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/achievements",
+    "error": "",
+    "note": "get_/achievements"
+  },
+  {
+    "timestamp": "2026-04-25T11:26:50.345000",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/achievements",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/achievements"
+  },
+  {
+    "timestamp": "2026-04-25T11:26:52.811137",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/leaderboard",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/leaderboard"
+  },
+  {
+    "timestamp": "2026-04-25T11:26:56.010580",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/leaderboard",
+    "error": "",
+    "note": "post_/leaderboard"
+  },
+  {
+    "timestamp": "2026-04-25T11:26:56.482185",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/daily",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/daily"
+  },
+  {
+    "timestamp": "2026-04-25T11:26:59.834398",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/daily",
+    "error": "",
+    "note": "post_/daily"
+  },
+  {
+    "timestamp": "2026-04-25T11:27:01.007595",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/bonus",
+    "error": "",
+    "note": "get_/bonus"
+  },
+  {
+    "timestamp": "2026-04-25T11:27:02.440160",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/bonus",
+    "error": "",
+    "note": "post_/bonus"
+  },
+  {
+    "timestamp": "2026-04-25T11:27:03.681983",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/gift",
+    "error": "",
+    "note": "get_/gift"
+  },
+  {
+    "timestamp": "2026-04-25T11:27:04.080961",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/gift",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/gift"
+  },
+  {
+    "timestamp": "2026-04-25T11:27:06.335841",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/surprise",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/surprise"
+  },
+  {
+    "timestamp": "2026-04-25T11:27:09.728573",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/surprise",
+    "error": "",
+    "note": "post_/surprise"
+  },
+  {
+    "timestamp": "2026-04-25T11:27:11.112556",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/bartender",
+    "error": "",
+    "note": "get_/bartender"
+  },
+  {
+    "timestamp": "2026-04-25T11:27:12.390745",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/bartender",
+    "error": "",
+    "note": "post_/bartender"
+  },
+  {
+    "timestamp": "2026-04-25T11:27:13.858725",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/mood/set",
+    "error": "",
+    "note": "get_/mood/set"
+  },
+  {
+    "timestamp": "2026-04-25T11:27:14.098166",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mood/set",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/mood/set"
+  },
+  {
+    "timestamp": "2026-04-25T11:27:17.520803",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/mood/get",
+    "error": "",
+    "note": "get_/mood/get"
+  },
+  {
+    "timestamp": "2026-04-25T11:27:18.955556",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mood/get",
+    "error": "",
+    "note": "post_/mood/get"
+  },
+  {
+    "timestamp": "2026-04-25T11:27:20.538449",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/reset",
+    "error": "",
+    "note": "get_/reset"
+  },
+  {
+    "timestamp": "2026-04-25T11:27:21.759059",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/reset",
+    "error": "",
+    "note": "post_/reset"
+  },
+  {
+    "timestamp": "2026-04-25T11:27:23.086273",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/flush",
+    "error": "",
+    "note": "get_/flush"
+  },
+  {
+    "timestamp": "2026-04-25T11:27:24.442155",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/flush",
+    "error": "",
+    "note": "post_/flush"
+  },
+  {
+    "timestamp": "2026-04-25T11:27:24.701511",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/cache",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/cache"
+  },
+  {
+    "timestamp": "2026-04-25T11:27:28.988761",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/cache",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/cache"
+  },
+  {
+    "timestamp": "2026-04-25T11:27:32.174877",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/stats",
+    "error": "",
+    "note": "get_/stats"
+  },
+  {
+    "timestamp": "2026-04-25T11:27:34.855136",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/stats",
+    "error": "",
+    "note": "post_/stats"
+  },
+  {
+    "timestamp": "2026-04-25T11:27:36.390279",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/flag",
+    "error": "Server disconnected without sending a response.",
+    "note": "get_/flag"
+  },
+  {
+    "timestamp": "2026-04-25T11:27:37.854181",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/flag",
+    "error": "",
+    "note": "post_/flag"
+  },
+  {
+    "timestamp": "2026-04-25T11:27:40.167419",
+    "account_id": "BAR-0392",
+    "method": "GET",
+    "path": "/key",
+    "error": "",
+    "note": "get_/key"
+  },
+  {
+    "timestamp": "2026-04-25T11:27:41.659810",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/key",
+    "error": "",
+    "note": "post_/key"
+  },
+  {
+    "timestamp": "2026-04-25T11:27:42.936201",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "error": "",
+    "note": "mix_водка_ром"
+  },
+  {
+    "timestamp": "2026-04-25T11:27:43.412258",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "водка",
+        "текила"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 51,
+      "mood_level": "grumpy"
+    },
+    "note": "mix_водка_текила"
+  },
+  {
+    "timestamp": "2026-04-25T11:27:46.645101",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "error": "",
+    "note": "mix_водка_виски"
+  },
+  {
+    "timestamp": "2026-04-25T11:27:47.299696",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "водка",
+        "джин"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 51,
+      "mood_level": "hostile"
+    },
+    "note": "mix_водка_джин"
+  },
+  {
+    "timestamp": "2026-04-25T11:27:49.563785",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "водка",
+        "кола"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 51,
+      "mood_level": "hostile"
+    },
+    "note": "mix_водка_кола"
+  },
+  {
+    "timestamp": "2026-04-25T11:27:51.837078",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "водка",
+        "сок"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drink": "Отвёртка",
+      "price": 0,
+      "free_every_7th": true,
+      "balance": 51,
+      "mood_level": "hostile"
+    },
+    "note": "mix_водка_сок"
+  },
+  {
+    "timestamp": "2026-04-25T11:27:54.091878",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "водка",
+        "тоник"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 51,
+      "mood_level": "hostile"
+    },
+    "note": "mix_водка_тоник"
+  },
+  {
+    "timestamp": "2026-04-25T11:27:56.335860",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "водка",
+        "лёд"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drink": "Русский",
+      "price": 8,
+      "favorite": true,
+      "balance": 43,
+      "mood_level": "hostile"
+    },
+    "note": "mix_водка_лёд"
+  },
+  {
+    "timestamp": "2026-04-25T11:27:58.597894",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "водка",
+        "молоко"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 43,
+      "mood_level": "hostile"
+    },
+    "note": "mix_водка_молоко"
+  },
+  {
+    "timestamp": "2026-04-25T11:28:00.856564",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "ром",
+        "текила"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 43,
+      "mood_level": "hostile"
+    },
+    "note": "mix_ром_текила"
+  },
+  {
+    "timestamp": "2026-04-25T11:28:03.116447",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "ром",
+        "виски"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 43,
+      "mood_level": "hostile"
+    },
+    "note": "mix_ром_виски"
+  },
+  {
+    "timestamp": "2026-04-25T11:28:05.363806",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "ром",
+        "джин"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 43,
+      "mood_level": "hostile"
+    },
+    "note": "mix_ром_джин"
+  },
+  {
+    "timestamp": "2026-04-25T11:28:07.611081",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "ром",
+        "кола"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 43,
+      "mood_level": "hostile"
+    },
+    "note": "mix_ром_кола"
+  },
+  {
+    "timestamp": "2026-04-25T11:28:09.864700",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "ром",
+        "сок"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 43,
+      "mood_level": "hostile"
+    },
+    "note": "mix_ром_сок"
+  },
+  {
+    "timestamp": "2026-04-25T11:28:12.112787",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "ром",
+        "тоник"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 43,
+      "mood_level": "hostile"
+    },
+    "note": "mix_ром_тоник"
+  },
+  {
+    "timestamp": "2026-04-25T11:28:14.357797",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "ром",
+        "лёд"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 43,
+      "mood_level": "hostile"
+    },
+    "note": "mix_ром_лёд"
+  },
+  {
+    "timestamp": "2026-04-25T11:28:16.811328",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "ром",
+        "молоко"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 43,
+      "mood_level": "hostile"
+    },
+    "note": "mix_ром_молоко"
+  },
+  {
+    "timestamp": "2026-04-25T11:28:19.061193",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "текила",
+        "виски"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 43,
+      "mood_level": "hostile"
+    },
+    "note": "mix_текила_виски"
+  },
+  {
+    "timestamp": "2026-04-25T11:28:21.301492",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "текила",
+        "джин"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 43,
+      "mood_level": "hostile"
+    },
+    "note": "mix_текила_джин"
+  },
+  {
+    "timestamp": "2026-04-25T11:28:23.546947",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "текила",
+        "кола"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 43,
+      "mood_level": "hostile"
+    },
+    "note": "mix_текила_кола"
+  },
+  {
+    "timestamp": "2026-04-25T11:28:25.796631",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "текила",
+        "сок"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drink": "Текила-санрайз",
+      "price": 18,
+      "balance": 25,
+      "mood_level": "hostile"
+    },
+    "note": "mix_текила_сок"
+  },
+  {
+    "timestamp": "2026-04-25T11:28:28.055040",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "текила",
+        "тоник"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 25,
+      "mood_level": "hostile"
+    },
+    "note": "mix_текила_тоник"
+  },
+  {
+    "timestamp": "2026-04-25T11:28:30.392373",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "текила",
+        "лёд"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 25,
+      "mood_level": "hostile"
+    },
+    "note": "mix_текила_лёд"
+  },
+  {
+    "timestamp": "2026-04-25T11:28:32.654669",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "текила",
+        "молоко"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 25,
+      "mood_level": "hostile"
+    },
+    "note": "mix_текила_молоко"
+  },
+  {
+    "timestamp": "2026-04-25T11:28:34.906913",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "виски",
+        "джин"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 25,
+      "mood_level": "hostile"
+    },
+    "note": "mix_виски_джин"
+  },
+  {
+    "timestamp": "2026-04-25T11:28:37.151243",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "виски",
+        "кола"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drink": "Виски-кола",
+      "price": 17,
+      "balance": 8,
+      "mood_level": "hostile"
+    },
+    "note": "mix_виски_кола"
+  },
+  {
+    "timestamp": "2026-04-25T11:28:39.396364",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "виски",
+        "сок"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 8,
+      "mood_level": "hostile"
+    },
+    "note": "mix_виски_сок"
+  },
+  {
+    "timestamp": "2026-04-25T11:28:41.643710",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "виски",
+        "тоник"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 8,
+      "mood_level": "hostile"
+    },
+    "note": "mix_виски_тоник"
+  },
+  {
+    "timestamp": "2026-04-25T11:28:43.893475",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "виски",
+        "лёд"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 8,
+      "mood_level": "hostile"
+    },
+    "note": "mix_виски_лёд"
+  },
+  {
+    "timestamp": "2026-04-25T11:28:46.141545",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "виски",
+        "молоко"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 8,
+      "mood_level": "hostile"
+    },
+    "note": "mix_виски_молоко"
+  },
+  {
+    "timestamp": "2026-04-25T11:28:48.378571",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "джин",
+        "кола"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 8,
+      "mood_level": "hostile"
+    },
+    "note": "mix_джин_кола"
+  },
+  {
+    "timestamp": "2026-04-25T11:28:50.623601",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "джин",
+        "сок"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 8,
+      "mood_level": "hostile"
+    },
+    "note": "mix_джин_сок"
+  },
+  {
+    "timestamp": "2026-04-25T11:28:52.870532",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "джин",
+        "тоник"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 8,
+      "mood_level": "hostile"
+    },
+    "note": "mix_джин_тоник"
+  },
+  {
+    "timestamp": "2026-04-25T11:28:55.116679",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "джин",
+        "лёд"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 8,
+      "mood_level": "hostile"
+    },
+    "note": "mix_джин_лёд"
+  },
+  {
+    "timestamp": "2026-04-25T11:28:57.366662",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "джин",
+        "молоко"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 8,
+      "mood_level": "hostile"
+    },
+    "note": "mix_джин_молоко"
+  },
+  {
+    "timestamp": "2026-04-25T11:28:59.607599",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "кола",
+        "сок"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 8,
+      "mood_level": "hostile"
+    },
+    "note": "mix_кола_сок"
+  },
+  {
+    "timestamp": "2026-04-25T11:29:01.873065",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "кола",
+        "тоник"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 8,
+      "mood_level": "hostile"
+    },
+    "note": "mix_кола_тоник"
+  },
+  {
+    "timestamp": "2026-04-25T11:29:04.121759",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "кола",
+        "лёд"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 8,
+      "mood_level": "hostile"
+    },
+    "note": "mix_кола_лёд"
+  },
+  {
+    "timestamp": "2026-04-25T11:29:06.366884",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "кола",
+        "молоко"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 8,
+      "mood_level": "hostile"
+    },
+    "note": "mix_кола_молоко"
+  },
+  {
+    "timestamp": "2026-04-25T11:29:08.604477",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "сок",
+        "тоник"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 8,
+      "mood_level": "hostile"
+    },
+    "note": "mix_сок_тоник"
+  },
+  {
+    "timestamp": "2026-04-25T11:29:10.849449",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "сок",
+        "лёд"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 8,
+      "mood_level": "hostile"
+    },
+    "note": "mix_сок_лёд"
+  },
+  {
+    "timestamp": "2026-04-25T11:29:13.099764",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "сок",
+        "молоко"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 8,
+      "mood_level": "hostile"
+    },
+    "note": "mix_сок_молоко"
+  },
+  {
+    "timestamp": "2026-04-25T11:29:15.336300",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "тоник",
+        "лёд"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 8,
+      "mood_level": "hostile"
+    },
+    "note": "mix_тоник_лёд"
+  },
+  {
+    "timestamp": "2026-04-25T11:29:17.716108",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "тоник",
+        "молоко"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 8,
+      "mood_level": "hostile"
+    },
+    "note": "mix_тоник_молоко"
+  },
+  {
+    "timestamp": "2026-04-25T11:29:19.964176",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "лёд",
+        "молоко"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 8,
+      "mood_level": "hostile"
+    },
+    "note": "mix_лёд_молоко"
+  },
+  {
+    "timestamp": "2026-04-25T11:29:22.210605",
+    "account_id": "BAR-0392",
+    "method": "POST",
+    "path": "/reset",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok"
+    },
+    "note": "cleanup"
+  },
+  {
+    "timestamp": "2026-04-25T11:29:24.455881",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/menu",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drinks": [
+        {
+          "name": "Куба Либре",
+          "price": 15,
+          "ingredients": [
+            "кола",
+            "лёд",
+            "ром"
+          ]
+        },
+        {
+          "name": "Отвёртка",
+          "price": 12,
+          "ingredients": [
+            "водка",
+            "сок"
+          ]
+        },
+        {
+          "name": "Джин-тоник",
+          "price": 14,
+          "ingredients": [
+            "джин",
+            "лёд",
+            "тоник"
+          ]
+        },
+        {
+          "name": "Виски-кола",
+          "price": 13,
+          "ingredients": [
+            "виски",
+            "кола"
+          ]
+        },
+        {
+          "name": "Текила-санрайз",
+          "price": 14,
+          "ingredients": [
+            "сок",
+            "текила"
+          ]
+        },
+        {
+          "name": "Русский",
+          "price": 10,
+          "ingredients": [
+            "водка",
+            "лёд"
+          ]
+        },
+        {
+          "name": "Белый русский",
+          "price": 16,
+          "ingredients": [
+            "водка",
+            "лёд",
+            "молоко"
+          ]
+        },
+        {
+          "name": "Лонг-Айленд",
+          "price": 25,
+          "ingredients": [
+            "водка",
+            "джин",
+            "кола",
+            "ром",
+            "текила"
+          ]
+        }
+      ],
+      "balance": 100,
+      "mood_level": "normal"
+    },
+    "note": "menu_day"
+  },
+  {
+    "timestamp": "2026-04-25T11:29:26.713708",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/order",
+    "payload": {
+      "name": "Русский"
+    },
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drink": "Русский",
+      "price": 10,
+      "balance": 90,
+      "mood_level": "normal"
+    },
+    "note": "order_стандарт"
+  },
+  {
+    "timestamp": "2026-04-25T11:29:28.962449",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "водка",
+        "лёд"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drink": "Русский",
+      "price": 8,
+      "balance": 82,
+      "mood_level": "normal"
+    },
+    "note": "mix_стандарт"
+  },
+  {
+    "timestamp": "2026-04-25T11:29:31.206707",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/balance",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "balance": 82,
+      "mood_level": "normal"
+    },
+    "note": "balance"
+  },
+  {
+    "timestamp": "2026-04-25T11:29:33.450553",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/tip",
+    "payload": {
+      "amount": 5
+    },
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "tip": 5,
+      "balance": 77,
+      "mood_level": "normal"
+    },
+    "note": "tip_5"
+  },
+  {
+    "timestamp": "2026-04-25T11:29:35.688579",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/history",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "orders": [
+        {
+          "drink": "Русский",
+          "price": 10,
+          "method": "order"
+        },
+        {
+          "drink": "Русский",
+          "price": 8,
+          "method": "mix"
+        }
+      ],
+      "balance": 77,
+      "mood_level": "normal"
+    },
+    "note": "history"
+  },
+  {
+    "timestamp": "2026-04-25T11:29:37.933725",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/profile",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "id": "BAR-0393",
+      "rank": "Новичок",
+      "total_orders": 2,
+      "unique_drinks": 1,
+      "favorite_drink": null,
+      "bar_closed": false
+    },
+    "note": "profile"
+  },
+  {
+    "timestamp": "2026-04-25T11:29:40.183969",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/menu",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drinks": [
+        {
+          "name": "Ночной русский",
+          "price": 8,
+          "ingredients": [
+            "водка",
+            "лёд",
+            "молоко"
+          ]
+        },
+        {
+          "name": "Бессонница",
+          "price": 10,
+          "ingredients": [
+            "кола",
+            "ром",
+            "тоник"
+          ]
+        },
+        {
+          "name": "Лунный свет",
+          "price": 12,
+          "ingredients": [
+            "джин",
+            "сок",
+            "тоник"
+          ]
+        }
+      ],
+      "balance": 77,
+      "mood_level": "normal"
+    },
+    "note": "menu_00:00"
+  },
+  {
+    "timestamp": "2026-04-25T11:29:42.433455",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/order",
+    "payload": {
+      "name": "Русский"
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 77,
+      "mood_level": "normal"
+    },
+    "note": "order_00:00"
+  },
+  {
+    "timestamp": "2026-04-25T11:29:44.675276",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/menu",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drinks": [
+        {
+          "name": "Куба Либре",
+          "price": 15,
+          "ingredients": [
+            "кола",
+            "лёд",
+            "ром"
+          ]
+        },
+        {
+          "name": "Отвёртка",
+          "price": 12,
+          "ingredients": [
+            "водка",
+            "сок"
+          ]
+        },
+        {
+          "name": "Джин-тоник",
+          "price": 14,
+          "ingredients": [
+            "джин",
+            "лёд",
+            "тоник"
+          ]
+        },
+        {
+          "name": "Виски-кола",
+          "price": 13,
+          "ingredients": [
+            "виски",
+            "кола"
+          ]
+        },
+        {
+          "name": "Текила-санрайз",
+          "price": 14,
+          "ingredients": [
+            "сок",
+            "текила"
+          ]
+        },
+        {
+          "name": "Русский",
+          "price": 10,
+          "ingredients": [
+            "водка",
+            "лёд"
+          ]
+        },
+        {
+          "name": "Белый русский",
+          "price": 16,
+          "ingredients": [
+            "водка",
+            "лёд",
+            "молоко"
+          ]
+        },
+        {
+          "name": "Лонг-Айленд",
+          "price": 25,
+          "ingredients": [
+            "водка",
+            "джин",
+            "кола",
+            "ром",
+            "текила"
+          ]
+        }
+      ],
+      "balance": 77,
+      "mood_level": "normal"
+    },
+    "note": "menu_06:00"
+  },
+  {
+    "timestamp": "2026-04-25T11:29:46.929641",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/order",
+    "payload": {
+      "name": "Русский"
+    },
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drink": "Русский",
+      "price": 10,
+      "balance": 67,
+      "mood_level": "normal"
+    },
+    "note": "order_06:00"
+  },
+  {
+    "timestamp": "2026-04-25T11:29:49.181930",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/menu",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drinks": [
+        {
+          "name": "Куба Либре",
+          "price": 15,
+          "ingredients": [
+            "кола",
+            "лёд",
+            "ром"
+          ]
+        },
+        {
+          "name": "Отвёртка",
+          "price": 12,
+          "ingredients": [
+            "водка",
+            "сок"
+          ]
+        },
+        {
+          "name": "Джин-тоник",
+          "price": 14,
+          "ingredients": [
+            "джин",
+            "лёд",
+            "тоник"
+          ]
+        },
+        {
+          "name": "Виски-кола",
+          "price": 13,
+          "ingredients": [
+            "виски",
+            "кола"
+          ]
+        },
+        {
+          "name": "Текила-санрайз",
+          "price": 14,
+          "ingredients": [
+            "сок",
+            "текила"
+          ]
+        },
+        {
+          "name": "Русский",
+          "price": 7,
+          "ingredients": [
+            "водка",
+            "лёд"
+          ]
+        },
+        {
+          "name": "Белый русский",
+          "price": 16,
+          "ingredients": [
+            "водка",
+            "лёд",
+            "молоко"
+          ]
+        },
+        {
+          "name": "Лонг-Айленд",
+          "price": 25,
+          "ingredients": [
+            "водка",
+            "джин",
+            "кола",
+            "ром",
+            "текила"
+          ]
+        }
+      ],
+      "balance": 67,
+      "mood_level": "normal"
+    },
+    "note": "menu_12:00"
+  },
+  {
+    "timestamp": "2026-04-25T11:29:51.438354",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/order",
+    "payload": {
+      "name": "Русский"
+    },
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drink": "Русский",
+      "price": 7,
+      "favorite": true,
+      "balance": 60,
+      "mood_level": "grumpy"
+    },
+    "note": "order_12:00"
+  },
+  {
+    "timestamp": "2026-04-25T11:29:53.686364",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/menu",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drinks": [
+        {
+          "name": "Куба Либре",
+          "price": 18,
+          "ingredients": [
+            "кола",
+            "лёд",
+            "ром"
+          ]
+        },
+        {
+          "name": "Отвёртка",
+          "price": 15,
+          "ingredients": [
+            "водка",
+            "сок"
+          ]
+        },
+        {
+          "name": "Джин-тоник",
+          "price": 17,
+          "ingredients": [
+            "джин",
+            "лёд",
+            "тоник"
+          ]
+        },
+        {
+          "name": "Виски-кола",
+          "price": 16,
+          "ingredients": [
+            "виски",
+            "кола"
+          ]
+        },
+        {
+          "name": "Текила-санрайз",
+          "price": 17,
+          "ingredients": [
+            "сок",
+            "текила"
+          ]
+        },
+        {
+          "name": "Русский",
+          "price": 9,
+          "ingredients": [
+            "водка",
+            "лёд"
+          ]
+        },
+        {
+          "name": "Белый русский",
+          "price": 20,
+          "ingredients": [
+            "водка",
+            "лёд",
+            "молоко"
+          ]
+        },
+        {
+          "name": "Лонг-Айленд",
+          "price": 30,
+          "ingredients": [
+            "водка",
+            "джин",
+            "кола",
+            "ром",
+            "текила"
+          ]
+        }
+      ],
+      "balance": 60,
+      "mood_level": "grumpy"
+    },
+    "note": "menu_18:00"
+  },
+  {
+    "timestamp": "2026-04-25T11:29:55.938601",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/order",
+    "payload": {
+      "name": "Русский"
+    },
+    "status_code": 200,
+    "response": {
+      "status": "prompt",
+      "prompt": "repeat_check",
+      "balance": 60,
+      "mood_level": "grumpy"
+    },
+    "note": "order_18:00"
+  },
+  {
+    "timestamp": "2026-04-25T11:29:58.182140",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/menu",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drinks": [
+        {
+          "name": "Куба Либре",
+          "price": 18,
+          "ingredients": [
+            "кола",
+            "лёд",
+            "ром"
+          ]
+        },
+        {
+          "name": "Отвёртка",
+          "price": 15,
+          "ingredients": [
+            "водка",
+            "сок"
+          ]
+        },
+        {
+          "name": "Джин-тоник",
+          "price": 17,
+          "ingredients": [
+            "джин",
+            "лёд",
+            "тоник"
+          ]
+        },
+        {
+          "name": "Виски-кола",
+          "price": 16,
+          "ingredients": [
+            "виски",
+            "кола"
+          ]
+        },
+        {
+          "name": "Текила-санрайз",
+          "price": 17,
+          "ingredients": [
+            "сок",
+            "текила"
+          ]
+        },
+        {
+          "name": "Русский",
+          "price": 9,
+          "ingredients": [
+            "водка",
+            "лёд"
+          ]
+        },
+        {
+          "name": "Белый русский",
+          "price": 20,
+          "ingredients": [
+            "водка",
+            "лёд",
+            "молоко"
+          ]
+        },
+        {
+          "name": "Лонг-Айленд",
+          "price": 30,
+          "ingredients": [
+            "водка",
+            "джин",
+            "кола",
+            "ром",
+            "текила"
+          ]
+        }
+      ],
+      "balance": 60,
+      "mood_level": "grumpy"
+    },
+    "note": "menu_23:59"
+  },
+  {
+    "timestamp": "2026-04-25T11:30:00.424587",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/order",
+    "payload": {
+      "name": "Русский"
+    },
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drink": "Русский",
+      "price": 9,
+      "favorite": true,
+      "balance": 51,
+      "mood_level": "grumpy"
+    },
+    "note": "order_23:59"
+  },
+  {
+    "timestamp": "2026-04-25T11:30:02.655950",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/menu",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drinks": [
+        {
+          "name": "Ночной русский",
+          "price": 10,
+          "ingredients": [
+            "водка",
+            "лёд",
+            "молоко"
+          ]
+        },
+        {
+          "name": "Бессонница",
+          "price": 12,
+          "ingredients": [
+            "кола",
+            "ром",
+            "тоник"
+          ]
+        },
+        {
+          "name": "Лунный свет",
+          "price": 15,
+          "ingredients": [
+            "джин",
+            "сок",
+            "тоник"
+          ]
+        }
+      ],
+      "balance": 51,
+      "mood_level": "grumpy"
+    },
+    "note": "menu_24:00"
+  },
+  {
+    "timestamp": "2026-04-25T11:30:04.919400",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/order",
+    "payload": {
+      "name": "Русский"
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 51,
+      "mood_level": "grumpy"
+    },
+    "note": "order_24:00"
+  },
+  {
+    "timestamp": "2026-04-25T11:30:07.151101",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/menu",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drinks": [
+        {
+          "name": "Куба Либре",
+          "price": 18,
+          "ingredients": [
+            "кола",
+            "лёд",
+            "ром"
+          ]
+        },
+        {
+          "name": "Отвёртка",
+          "price": 15,
+          "ingredients": [
+            "водка",
+            "сок"
+          ]
+        },
+        {
+          "name": "Джин-тоник",
+          "price": 17,
+          "ingredients": [
+            "джин",
+            "лёд",
+            "тоник"
+          ]
+        },
+        {
+          "name": "Виски-кола",
+          "price": 16,
+          "ingredients": [
+            "виски",
+            "кола"
+          ]
+        },
+        {
+          "name": "Текила-санрайз",
+          "price": 17,
+          "ingredients": [
+            "сок",
+            "текила"
+          ]
+        },
+        {
+          "name": "Русский",
+          "price": 9,
+          "ingredients": [
+            "водка",
+            "лёд"
+          ]
+        },
+        {
+          "name": "Белый русский",
+          "price": 20,
+          "ingredients": [
+            "водка",
+            "лёд",
+            "молоко"
+          ]
+        },
+        {
+          "name": "Лонг-Айленд",
+          "price": 30,
+          "ingredients": [
+            "водка",
+            "джин",
+            "кола",
+            "ром",
+            "текила"
+          ]
+        }
+      ],
+      "balance": 51,
+      "mood_level": "grumpy"
+    },
+    "note": "menu_13:60"
+  },
+  {
+    "timestamp": "2026-04-25T11:30:09.393094",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/order",
+    "payload": {
+      "name": "Русский"
+    },
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drink": "Русский",
+      "price": 9,
+      "favorite": true,
+      "balance": 42,
+      "mood_level": "grumpy"
+    },
+    "note": "order_13:60"
+  },
+  {
+    "timestamp": "2026-04-25T11:30:11.645241",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/menu",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drinks": [
+        {
+          "name": "Куба Либре",
+          "price": 18,
+          "ingredients": [
+            "кола",
+            "лёд",
+            "ром"
+          ]
+        },
+        {
+          "name": "Отвёртка",
+          "price": 15,
+          "ingredients": [
+            "водка",
+            "сок"
+          ]
+        },
+        {
+          "name": "Джин-тоник",
+          "price": 17,
+          "ingredients": [
+            "джин",
+            "лёд",
+            "тоник"
+          ]
+        },
+        {
+          "name": "Виски-кола",
+          "price": 16,
+          "ingredients": [
+            "виски",
+            "кола"
+          ]
+        },
+        {
+          "name": "Текила-санрайз",
+          "price": 17,
+          "ingredients": [
+            "сок",
+            "текила"
+          ]
+        },
+        {
+          "name": "Русский",
+          "price": 9,
+          "ingredients": [
+            "водка",
+            "лёд"
+          ]
+        },
+        {
+          "name": "Белый русский",
+          "price": 20,
+          "ingredients": [
+            "водка",
+            "лёд",
+            "молоко"
+          ]
+        },
+        {
+          "name": "Лонг-Айленд",
+          "price": 30,
+          "ingredients": [
+            "водка",
+            "джин",
+            "кола",
+            "ром",
+            "текила"
+          ]
+        }
+      ],
+      "balance": 42,
+      "mood_level": "grumpy"
+    },
+    "note": "menu_foo"
+  },
+  {
+    "timestamp": "2026-04-25T11:30:13.887379",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/order",
+    "payload": {
+      "name": "Русский"
+    },
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drink": "Русский",
+      "price": 0,
+      "free_every_7th": true,
+      "balance": 42,
+      "mood_level": "grumpy"
+    },
+    "note": "order_foo"
+  },
+  {
+    "timestamp": "2026-04-25T11:30:16.129132",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/menu",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drinks": [
+        {
+          "name": "Куба Либре",
+          "price": 18,
+          "ingredients": [
+            "кола",
+            "лёд",
+            "ром"
+          ]
+        },
+        {
+          "name": "Отвёртка",
+          "price": 15,
+          "ingredients": [
+            "водка",
+            "сок"
+          ]
+        },
+        {
+          "name": "Джин-тоник",
+          "price": 17,
+          "ingredients": [
+            "джин",
+            "лёд",
+            "тоник"
+          ]
+        },
+        {
+          "name": "Виски-кола",
+          "price": 16,
+          "ingredients": [
+            "виски",
+            "кола"
+          ]
+        },
+        {
+          "name": "Текила-санрайз",
+          "price": 17,
+          "ingredients": [
+            "сок",
+            "текила"
+          ]
+        },
+        {
+          "name": "Русский",
+          "price": 9,
+          "ingredients": [
+            "водка",
+            "лёд"
+          ]
+        },
+        {
+          "name": "Белый русский",
+          "price": 20,
+          "ingredients": [
+            "водка",
+            "лёд",
+            "молоко"
+          ]
+        },
+        {
+          "name": "Лонг-Айленд",
+          "price": 30,
+          "ingredients": [
+            "водка",
+            "джин",
+            "кола",
+            "ром",
+            "текила"
+          ]
+        }
+      ],
+      "balance": 42,
+      "mood_level": "grumpy"
+    },
+    "note": "menu_no_time"
+  },
+  {
+    "timestamp": "2026-04-25T11:30:18.534498",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/order",
+    "payload": {
+      "name": "Русский"
+    },
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drink": "Русский",
+      "price": 9,
+      "favorite": true,
+      "balance": 33,
+      "mood_level": "hostile"
+    },
+    "note": "order_no_time"
+  },
+  {
+    "timestamp": "2026-04-25T11:30:20.765736",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/menu",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drinks": [
+        {
+          "name": "Ночной русский",
+          "price": 12,
+          "ingredients": [
+            "водка",
+            "лёд",
+            "молоко"
+          ]
+        },
+        {
+          "name": "Бессонница",
+          "price": 15,
+          "ingredients": [
+            "кола",
+            "ром",
+            "тоник"
+          ]
+        },
+        {
+          "name": "Лунный свет",
+          "price": 18,
+          "ingredients": [
+            "джин",
+            "сок",
+            "тоник"
+          ]
+        }
+      ],
+      "balance": 33,
+      "mood_level": "hostile"
+    },
+    "note": "menu_00:01"
+  },
+  {
+    "timestamp": "2026-04-25T11:30:23.001739",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/order",
+    "payload": {
+      "name": "Русский"
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 33,
+      "mood_level": "hostile"
+    },
+    "note": "order_00:01"
+  },
+  {
+    "timestamp": "2026-04-25T11:30:25.254479",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/menu",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drinks": [
+        {
+          "name": "Ночной русский",
+          "price": 12,
+          "ingredients": [
+            "водка",
+            "лёд",
+            "молоко"
+          ]
+        },
+        {
+          "name": "Бессонница",
+          "price": 15,
+          "ingredients": [
+            "кола",
+            "ром",
+            "тоник"
+          ]
+        },
+        {
+          "name": "Лунный свет",
+          "price": 18,
+          "ingredients": [
+            "джин",
+            "сок",
+            "тоник"
+          ]
+        }
+      ],
+      "balance": 33,
+      "mood_level": "hostile"
+    },
+    "note": "menu_05:59"
+  },
+  {
+    "timestamp": "2026-04-25T11:30:27.503254",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/order",
+    "payload": {
+      "name": "Русский"
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 33,
+      "mood_level": "hostile"
+    },
+    "note": "order_05:59"
+  },
+  {
+    "timestamp": "2026-04-25T11:30:29.762586",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/order",
+    "payload": {
+      "name": ""
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 33,
+      "mood_level": "hostile"
+    },
+    "note": "empty_order"
+  },
+  {
+    "timestamp": "2026-04-25T11:30:32.005056",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/order",
+    "payload": {
+      "drink": "Русский"
+    },
+    "status_code": 422,
+    "response": {
+      "detail": [
+        {
+          "type": "missing",
+          "loc": [
+            "body",
+            "name"
+          ],
+          "msg": "Field required",
+          "input": {
+            "drink": "Русский"
+          }
+        }
+      ]
+    },
+    "note": "wrong_key_order"
+  },
+  {
+    "timestamp": "2026-04-25T11:30:34.265826",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": []
+    },
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drink": "Воздух",
+      "price": 0,
+      "balance": 33,
+      "mood_level": "hostile"
+    },
+    "note": "empty_mix"
+  },
+  {
+    "timestamp": "2026-04-25T11:30:36.511292",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/tip",
+    "payload": {
+      "amount": -10
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "invalid_amount",
+      "balance": 33,
+      "mood_level": "hostile"
+    },
+    "note": "negative_tip"
+  },
+  {
+    "timestamp": "2026-04-25T11:30:38.795220",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/tip",
+    "payload": {
+      "amount": 0
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "invalid_amount",
+      "balance": 33,
+      "mood_level": "hostile"
+    },
+    "note": "zero_tip"
+  },
+  {
+    "timestamp": "2026-04-25T11:30:41.035366",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/tip",
+    "payload": {
+      "amount": 9999
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "insufficient_funds",
+      "balance": 33,
+      "mood_level": "hostile"
+    },
+    "note": "huge_tip"
+  },
+  {
+    "timestamp": "2026-04-25T11:30:43.289445",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/order",
+    "payload": {
+      "ingredients": [
+        "водка",
+        "лёд"
+      ]
+    },
+    "status_code": 422,
+    "response": {
+      "detail": [
+        {
+          "type": "missing",
+          "loc": [
+            "body",
+            "name"
+          ],
+          "msg": "Field required",
+          "input": {
+            "ingredients": [
+              "водка",
+              "лёд"
+            ]
+          }
+        }
+      ]
+    },
+    "note": "order_as_mix"
+  },
+  {
+    "timestamp": "2026-04-25T11:30:45.546725",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "name": "Русский"
+    },
+    "status_code": 422,
+    "response": {
+      "detail": [
+        {
+          "type": "missing",
+          "loc": [
+            "body",
+            "ingredients"
+          ],
+          "msg": "Field required",
+          "input": {
+            "name": "Русский"
+          }
+        }
+      ]
+    },
+    "note": "mix_as_order"
+  },
+  {
+    "account_id": "NO_AUTH",
+    "method": "GET",
+    "path": "/menu",
+    "status_code": 401,
+    "response": {
+      "detail": {
+        "status": "error",
+        "error": "unauthorized"
+      }
+    },
+    "note": "unauth_menu"
+  },
+  {
+    "timestamp": "2026-04-25T11:30:48.036967",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/secret",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "not_found"
+    },
+    "note": "get_/secret"
+  },
+  {
+    "timestamp": "2026-04-25T11:30:50.292263",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/secret",
+    "payload": {},
+    "status_code": 405,
+    "response": {
+      "detail": "Method Not Allowed"
+    },
+    "note": "post_/secret"
+  },
+  {
+    "timestamp": "2026-04-25T11:30:52.537929",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/admin",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/admin"
+  },
+  {
+    "timestamp": "2026-04-25T11:30:54.787349",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/admin",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/admin"
+  },
+  {
+    "timestamp": "2026-04-25T11:30:57.039463",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/health",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/health"
+  },
+  {
+    "timestamp": "2026-04-25T11:30:59.291878",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/health",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/health"
+  },
+  {
+    "timestamp": "2026-04-25T11:31:17.545558",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/status",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/status"
+  },
+  {
+    "timestamp": "2026-04-25T11:31:19.938959",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/status",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/status"
+  },
+  {
+    "timestamp": "2026-04-25T11:31:22.186392",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/mood",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/mood"
+  },
+  {
+    "timestamp": "2026-04-25T11:31:24.427271",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mood",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/mood"
+  },
+  {
+    "timestamp": "2026-04-25T11:31:26.659389",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/rank",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/rank"
+  },
+  {
+    "timestamp": "2026-04-25T11:31:28.897701",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/rank",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/rank"
+  },
+  {
+    "timestamp": "2026-04-25T11:31:31.146805",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/inventory",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/inventory"
+  },
+  {
+    "timestamp": "2026-04-25T11:31:33.444668",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/inventory",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/inventory"
+  },
+  {
+    "timestamp": "2026-04-25T11:31:35.771132",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/chat",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/chat"
+  },
+  {
+    "timestamp": "2026-04-25T11:31:38.026507",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/chat",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/chat"
+  },
+  {
+    "timestamp": "2026-04-25T11:31:40.277713",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/talk",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/talk"
+  },
+  {
+    "timestamp": "2026-04-25T11:31:42.536487",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/talk",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/talk"
+  },
+  {
+    "timestamp": "2026-04-25T11:31:44.831423",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/help",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/help"
+  },
+  {
+    "timestamp": "2026-04-25T11:31:47.072463",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/help",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/help"
+  },
+  {
+    "timestamp": "2026-04-25T11:31:49.313363",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/version",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/version"
+  },
+  {
+    "timestamp": "2026-04-25T11:31:51.559115",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/version",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/version"
+  },
+  {
+    "timestamp": "2026-04-25T11:31:53.804874",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/config",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/config"
+  },
+  {
+    "timestamp": "2026-04-25T11:31:56.047751",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/config",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/config"
+  },
+  {
+    "timestamp": "2026-04-25T11:31:58.297673",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/debug",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/debug"
+  },
+  {
+    "timestamp": "2026-04-25T11:32:00.541841",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/debug",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/debug"
+  },
+  {
+    "timestamp": "2026-04-25T11:32:02.792629",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/hint",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/hint"
+  },
+  {
+    "timestamp": "2026-04-25T11:32:05.033561",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/hint",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/hint"
+  },
+  {
+    "timestamp": "2026-04-25T11:32:07.350999",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/recipe",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/recipe"
+  },
+  {
+    "timestamp": "2026-04-25T11:32:09.599992",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/recipe",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/recipe"
+  },
+  {
+    "timestamp": "2026-04-25T11:32:11.851982",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/about",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/about"
+  },
+  {
+    "timestamp": "2026-04-25T11:32:14.097976",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/about",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/about"
+  },
+  {
+    "timestamp": "2026-04-25T11:32:16.337894",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/api",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/api"
+  },
+  {
+    "timestamp": "2026-04-25T11:32:18.572618",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/api",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/api"
+  },
+  {
+    "timestamp": "2026-04-25T11:32:21.019043",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/swagger",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/swagger"
+  },
+  {
+    "timestamp": "2026-04-25T11:32:23.421793",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/swagger",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/swagger"
+  },
+  {
+    "timestamp": "2026-04-25T11:32:25.677693",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/docs",
+    "payload": null,
+    "status_code": 404,
+    "response": "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n<hr><center>nginx/1.29.6</center>\r\n</body>\r\n</html>\r\n",
+    "note": "get_/docs"
+  },
+  {
+    "timestamp": "2026-04-25T11:32:27.920742",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/docs",
+    "payload": {},
+    "status_code": 404,
+    "response": "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n<hr><center>nginx/1.29.6</center>\r\n</body>\r\n</html>\r\n",
+    "note": "post_/docs"
+  },
+  {
+    "timestamp": "2026-04-25T11:32:30.170303",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/info",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/info"
+  },
+  {
+    "timestamp": "2026-04-25T11:32:32.432516",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/info",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/info"
+  },
+  {
+    "timestamp": "2026-04-25T11:32:34.674517",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/state",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/state"
+  },
+  {
+    "timestamp": "2026-04-25T11:32:36.923698",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/state",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/state"
+  },
+  {
+    "timestamp": "2026-04-25T11:32:39.168275",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/settings",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/settings"
+  },
+  {
+    "timestamp": "2026-04-25T11:32:41.406007",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/settings",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/settings"
+  },
+  {
+    "timestamp": "2026-04-25T11:32:43.643327",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/tips",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/tips"
+  },
+  {
+    "timestamp": "2026-04-25T11:32:45.900756",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/tips",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/tips"
+  },
+  {
+    "timestamp": "2026-04-25T11:32:48.153699",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/achievements",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/achievements"
+  },
+  {
+    "timestamp": "2026-04-25T11:32:50.398680",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/achievements",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/achievements"
+  },
+  {
+    "timestamp": "2026-04-25T11:32:52.654382",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/leaderboard",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/leaderboard"
+  },
+  {
+    "timestamp": "2026-04-25T11:32:54.903038",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/leaderboard",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/leaderboard"
+  },
+  {
+    "timestamp": "2026-04-25T11:32:57.233237",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/daily",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/daily"
+  },
+  {
+    "timestamp": "2026-04-25T11:32:59.511372",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/daily",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/daily"
+  },
+  {
+    "timestamp": "2026-04-25T11:33:01.763188",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/bonus",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/bonus"
+  },
+  {
+    "timestamp": "2026-04-25T11:33:04.006079",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/bonus",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/bonus"
+  },
+  {
+    "timestamp": "2026-04-25T11:33:06.329629",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/gift",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/gift"
+  },
+  {
+    "timestamp": "2026-04-25T11:33:08.567153",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/gift",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/gift"
+  },
+  {
+    "timestamp": "2026-04-25T11:33:10.809186",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/surprise",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/surprise"
+  },
+  {
+    "timestamp": "2026-04-25T11:33:13.063409",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/surprise",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/surprise"
+  },
+  {
+    "timestamp": "2026-04-25T11:33:15.311669",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/bartender",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/bartender"
+  },
+  {
+    "timestamp": "2026-04-25T11:33:17.552645",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/bartender",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/bartender"
+  },
+  {
+    "timestamp": "2026-04-25T11:33:19.804651",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/mood/set",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/mood/set"
+  },
+  {
+    "timestamp": "2026-04-25T11:33:22.300656",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mood/set",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/mood/set"
+  },
+  {
+    "timestamp": "2026-04-25T11:33:24.561401",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/mood/get",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/mood/get"
+  },
+  {
+    "timestamp": "2026-04-25T11:33:26.798488",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mood/get",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/mood/get"
+  },
+  {
+    "timestamp": "2026-04-25T11:33:29.047959",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/reset",
+    "payload": null,
+    "status_code": 405,
+    "response": {
+      "detail": "Method Not Allowed"
+    },
+    "note": "get_/reset"
+  },
+  {
+    "timestamp": "2026-04-25T11:33:31.304189",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/reset",
+    "payload": {},
+    "status_code": 200,
+    "response": {
+      "status": "ok"
+    },
+    "note": "post_/reset"
+  },
+  {
+    "timestamp": "2026-04-25T11:33:33.544265",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/flush",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/flush"
+  },
+  {
+    "timestamp": "2026-04-25T11:33:35.792397",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/flush",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/flush"
+  },
+  {
+    "timestamp": "2026-04-25T11:33:38.051710",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/cache",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/cache"
+  },
+  {
+    "timestamp": "2026-04-25T11:33:40.291766",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/cache",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/cache"
+  },
+  {
+    "timestamp": "2026-04-25T11:33:43.012077",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/stats",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/stats"
+  },
+  {
+    "timestamp": "2026-04-25T11:33:47.306594",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/stats",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/stats"
+  },
+  {
+    "timestamp": "2026-04-25T11:33:49.559448",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/flag",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/flag"
+  },
+  {
+    "timestamp": "2026-04-25T11:33:51.811952",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/flag",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/flag"
+  },
+  {
+    "timestamp": "2026-04-25T11:33:54.060164",
+    "account_id": "BAR-0393",
+    "method": "GET",
+    "path": "/key",
+    "payload": null,
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "get_/key"
+  },
+  {
+    "timestamp": "2026-04-25T11:33:56.307218",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/key",
+    "payload": {},
+    "status_code": 404,
+    "response": {
+      "detail": "Not Found"
+    },
+    "note": "post_/key"
+  },
+  {
+    "timestamp": "2026-04-25T11:33:58.571049",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "водка",
+        "ром"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 100,
+      "mood_level": "normal"
+    },
+    "note": "mix_водка_ром"
+  },
+  {
+    "timestamp": "2026-04-25T11:34:00.830995",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "водка",
+        "текила"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 100,
+      "mood_level": "normal"
+    },
+    "note": "mix_водка_текила"
+  },
+  {
+    "timestamp": "2026-04-25T11:34:03.095385",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "водка",
+        "виски"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 100,
+      "mood_level": "grumpy"
+    },
+    "note": "mix_водка_виски"
+  },
+  {
+    "timestamp": "2026-04-25T11:34:05.361901",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "водка",
+        "джин"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 100,
+      "mood_level": "grumpy"
+    },
+    "note": "mix_водка_джин"
+  },
+  {
+    "timestamp": "2026-04-25T11:34:07.613399",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "водка",
+        "кола"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 100,
+      "mood_level": "grumpy"
+    },
+    "note": "mix_водка_кола"
+  },
+  {
+    "timestamp": "2026-04-25T11:34:09.889961",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "водка",
+        "сок"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drink": "Отвёртка",
+      "price": 12,
+      "balance": 88,
+      "mood_level": "grumpy"
+    },
+    "note": "mix_водка_сок"
+  },
+  {
+    "timestamp": "2026-04-25T11:34:12.173962",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "водка",
+        "тоник"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 88,
+      "mood_level": "hostile"
+    },
+    "note": "mix_водка_тоник"
+  },
+  {
+    "timestamp": "2026-04-25T11:34:14.431606",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "водка",
+        "лёд"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drink": "Русский",
+      "price": 12,
+      "balance": 76,
+      "mood_level": "hostile"
+    },
+    "note": "mix_водка_лёд"
+  },
+  {
+    "timestamp": "2026-04-25T11:34:16.680143",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "водка",
+        "молоко"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 76,
+      "mood_level": "hostile"
+    },
+    "note": "mix_водка_молоко"
+  },
+  {
+    "timestamp": "2026-04-25T11:34:18.954464",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "ром",
+        "текила"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 76,
+      "mood_level": "hostile"
+    },
+    "note": "mix_ром_текила"
+  },
+  {
+    "timestamp": "2026-04-25T11:34:21.199345",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "ром",
+        "виски"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 76,
+      "mood_level": "hostile"
+    },
+    "note": "mix_ром_виски"
+  },
+  {
+    "timestamp": "2026-04-25T11:34:23.582853",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "ром",
+        "джин"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 76,
+      "mood_level": "hostile"
+    },
+    "note": "mix_ром_джин"
+  },
+  {
+    "timestamp": "2026-04-25T11:34:25.850654",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "ром",
+        "кола"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 76,
+      "mood_level": "hostile"
+    },
+    "note": "mix_ром_кола"
+  },
+  {
+    "timestamp": "2026-04-25T11:34:28.095655",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "ром",
+        "сок"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 76,
+      "mood_level": "hostile"
+    },
+    "note": "mix_ром_сок"
+  },
+  {
+    "timestamp": "2026-04-25T11:34:30.712914",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "ром",
+        "тоник"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 76,
+      "mood_level": "hostile"
+    },
+    "note": "mix_ром_тоник"
+  },
+  {
+    "timestamp": "2026-04-25T11:34:32.969294",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "ром",
+        "лёд"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 76,
+      "mood_level": "hostile"
+    },
+    "note": "mix_ром_лёд"
+  },
+  {
+    "timestamp": "2026-04-25T11:34:35.216699",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "ром",
+        "молоко"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 76,
+      "mood_level": "hostile"
+    },
+    "note": "mix_ром_молоко"
+  },
+  {
+    "timestamp": "2026-04-25T11:34:37.885438",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "текила",
+        "виски"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 76,
+      "mood_level": "hostile"
+    },
+    "note": "mix_текила_виски"
+  },
+  {
+    "timestamp": "2026-04-25T11:34:40.147518",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "текила",
+        "джин"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 76,
+      "mood_level": "hostile"
+    },
+    "note": "mix_текила_джин"
+  },
+  {
+    "timestamp": "2026-04-25T11:34:42.521596",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "текила",
+        "кола"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 76,
+      "mood_level": "hostile"
+    },
+    "note": "mix_текила_кола"
+  },
+  {
+    "timestamp": "2026-04-25T11:34:44.801534",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "текила",
+        "сок"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drink": "Текила-санрайз",
+      "price": 18,
+      "balance": 58,
+      "mood_level": "hostile"
+    },
+    "note": "mix_текила_сок"
+  },
+  {
+    "timestamp": "2026-04-25T11:34:47.071593",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "текила",
+        "тоник"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 58,
+      "mood_level": "hostile"
+    },
+    "note": "mix_текила_тоник"
+  },
+  {
+    "timestamp": "2026-04-25T11:34:49.323365",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "текила",
+        "лёд"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 58,
+      "mood_level": "hostile"
+    },
+    "note": "mix_текила_лёд"
+  },
+  {
+    "timestamp": "2026-04-25T11:34:51.569322",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "текила",
+        "молоко"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 58,
+      "mood_level": "hostile"
+    },
+    "note": "mix_текила_молоко"
+  },
+  {
+    "timestamp": "2026-04-25T11:34:53.823179",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "виски",
+        "джин"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 58,
+      "mood_level": "hostile"
+    },
+    "note": "mix_виски_джин"
+  },
+  {
+    "timestamp": "2026-04-25T11:36:40.587622",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "виски",
+        "кола"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "ok",
+      "drink": "Виски-кола",
+      "price": 17,
+      "balance": 41,
+      "mood_level": "hostile"
+    },
+    "note": "mix_виски_кола"
+  },
+  {
+    "timestamp": "2026-04-25T11:36:42.828194",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "виски",
+        "сок"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 41,
+      "mood_level": "hostile"
+    },
+    "note": "mix_виски_сок"
+  },
+  {
+    "timestamp": "2026-04-25T11:36:45.089784",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "виски",
+        "тоник"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 41,
+      "mood_level": "hostile"
+    },
+    "note": "mix_виски_тоник"
+  },
+  {
+    "timestamp": "2026-04-25T11:36:47.356811",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "виски",
+        "лёд"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 41,
+      "mood_level": "hostile"
+    },
+    "note": "mix_виски_лёд"
+  },
+  {
+    "timestamp": "2026-04-25T11:36:49.706364",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "виски",
+        "молоко"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 41,
+      "mood_level": "hostile"
+    },
+    "note": "mix_виски_молоко"
+  },
+  {
+    "timestamp": "2026-04-25T11:36:51.953528",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "джин",
+        "кола"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 41,
+      "mood_level": "hostile"
+    },
+    "note": "mix_джин_кола"
+  },
+  {
+    "timestamp": "2026-04-25T11:36:54.621278",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "джин",
+        "сок"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 41,
+      "mood_level": "hostile"
+    },
+    "note": "mix_джин_сок"
+  },
+  {
+    "timestamp": "2026-04-25T11:36:56.902217",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "джин",
+        "тоник"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 41,
+      "mood_level": "hostile"
+    },
+    "note": "mix_джин_тоник"
+  },
+  {
+    "timestamp": "2026-04-25T11:36:59.165333",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "джин",
+        "лёд"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 41,
+      "mood_level": "hostile"
+    },
+    "note": "mix_джин_лёд"
+  },
+  {
+    "timestamp": "2026-04-25T11:37:01.458163",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "джин",
+        "молоко"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 41,
+      "mood_level": "hostile"
+    },
+    "note": "mix_джин_молоко"
+  },
+  {
+    "timestamp": "2026-04-25T11:37:03.732534",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "кола",
+        "сок"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 41,
+      "mood_level": "hostile"
+    },
+    "note": "mix_кола_сок"
+  },
+  {
+    "timestamp": "2026-04-25T11:37:05.987120",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "кола",
+        "тоник"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 41,
+      "mood_level": "hostile"
+    },
+    "note": "mix_кола_тоник"
+  },
+  {
+    "timestamp": "2026-04-25T11:37:08.238228",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "кола",
+        "лёд"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 41,
+      "mood_level": "hostile"
+    },
+    "note": "mix_кола_лёд"
+  },
+  {
+    "timestamp": "2026-04-25T11:37:10.498574",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "кола",
+        "молоко"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 41,
+      "mood_level": "hostile"
+    },
+    "note": "mix_кола_молоко"
+  },
+  {
+    "timestamp": "2026-04-25T11:37:12.743694",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "сок",
+        "тоник"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 41,
+      "mood_level": "hostile"
+    },
+    "note": "mix_сок_тоник"
+  },
+  {
+    "timestamp": "2026-04-25T11:37:14.991363",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "сок",
+        "лёд"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 41,
+      "mood_level": "hostile"
+    },
+    "note": "mix_сок_лёд"
+  },
+  {
+    "timestamp": "2026-04-25T11:37:17.238465",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "сок",
+        "молоко"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 41,
+      "mood_level": "hostile"
+    },
+    "note": "mix_сок_молоко"
+  },
+  {
+    "timestamp": "2026-04-25T11:37:19.486897",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "тоник",
+        "лёд"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 41,
+      "mood_level": "hostile"
+    },
+    "note": "mix_тоник_лёд"
+  },
+  {
+    "timestamp": "2026-04-25T11:37:21.733439",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "тоник",
+        "молоко"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 41,
+      "mood_level": "hostile"
+    },
+    "note": "mix_тоник_молоко"
+  },
+  {
+    "timestamp": "2026-04-25T11:37:23.980139",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/mix",
+    "payload": {
+      "ingredients": [
+        "лёд",
+        "молоко"
+      ]
+    },
+    "status_code": 200,
+    "response": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 41,
+      "mood_level": "hostile"
+    },
+    "note": "mix_лёд_молоко"
+  },
+  {
+    "timestamp": "2026-04-25T11:37:26.237113",
+    "account_id": "BAR-0393",
+    "method": "POST",
+    "path": "/reset",
+    "payload": null,
+    "status_code": 200,
+    "response": {
+      "status": "ok"
+    },
+    "note": "cleanup"
+  }
+]
