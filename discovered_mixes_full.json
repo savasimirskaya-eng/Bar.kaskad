@@ -1,0 +1,146 @@
+[
+  {
+    "drink": "Отвёртка",
+    "ingredients": [
+      "водка",
+      "сок"
+    ],
+    "price": 15,
+    "secret": false,
+    "effect": null,
+    "favorite": false,
+    "mood": "hostile"
+  },
+  {
+    "drink": "Русский",
+    "ingredients": [
+      "водка",
+      "лёд"
+    ],
+    "price": 12,
+    "secret": false,
+    "effect": null,
+    "favorite": false,
+    "mood": "hostile"
+  },
+  {
+    "drink": "Текила-санрайз",
+    "ingredients": [
+      "сок",
+      "текила"
+    ],
+    "price": 18,
+    "secret": false,
+    "effect": null,
+    "favorite": false,
+    "mood": "hostile"
+  },
+  {
+    "drink": "Виски-кола",
+    "ingredients": [
+      "виски",
+      "кола"
+    ],
+    "price": 17,
+    "secret": false,
+    "effect": null,
+    "favorite": false,
+    "mood": "hostile"
+  },
+  {
+    "drink": "Мертвец",
+    "ingredients": [
+      "водка",
+      "молоко",
+      "ром"
+    ],
+    "price": 0,
+    "secret": true,
+    "effect": "balance_doubled",
+    "favorite": false,
+    "mood": "hostile"
+  },
+  {
+    "drink": "Куба Либре",
+    "ingredients": [
+      "кола",
+      "лёд",
+      "ром"
+    ],
+    "price": 18,
+    "secret": false,
+    "effect": null,
+    "favorite": false,
+    "mood": "hostile"
+  },
+  {
+    "drink": "Ошибка бармена",
+    "ingredients": [
+      "лёд",
+      "молоко",
+      "текила"
+    ],
+    "price": 0,
+    "secret": true,
+    "effect": "mood_max",
+    "favorite": false,
+    "mood": "generous"
+  },
+  {
+    "drink": "Джин-тоник",
+    "ingredients": [
+      "джин",
+      "лёд",
+      "тоник"
+    ],
+    "price": 17,
+    "secret": false,
+    "effect": null,
+    "favorite": false,
+    "mood": "hostile"
+  },
+  {
+    "drink": "Зелье бармена",
+    "ingredients": [
+      "джин",
+      "лёд",
+      "сок",
+      "тоник"
+    ],
+    "price": 0,
+    "secret": true,
+    "effect": "secret_unlocked",
+    "favorite": false,
+    "mood": "hostile"
+  },
+  {
+    "drink": "Армагеддон",
+    "ingredients": [
+      "виски",
+      "водка",
+      "джин",
+      "ром",
+      "текила"
+    ],
+    "price": 0,
+    "secret": true,
+    "effect": "armageddon",
+    "favorite": false,
+    "mood": "hostile"
+  },
+  {
+    "drink": "Лонг-Айленд",
+    "ingredients": [
+      "водка",
+      "джин",
+      "кола",
+      "ром",
+      "текила"
+    ],
+    "price": 28,
+    "secret": false,
+    "effect": null,
+    "favorite": false,
+    "mood": "grumpy"
+  }
+]

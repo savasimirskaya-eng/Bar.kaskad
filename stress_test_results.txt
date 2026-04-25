@@ -1,0 +1,2144 @@
+[
+  {
+    "ts": "2026-04-25T13:54:05.207065",
+    "method": "POST",
+    "path": "/reset",
+    "status": 200,
+    "note": "start",
+    "resp": {
+      "status": "ok"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:54:05.297337",
+    "method": "POST",
+    "path": "/mix",
+    "status": 200,
+    "note": "deadman_1",
+    "resp": {
+      "status": "ok",
+      "drink": "Мертвец",
+      "price": 0,
+      "secret": true,
+      "effect": "balance_doubled",
+      "balance": 200,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:54:05.382272",
+    "method": "POST",
+    "path": "/tip",
+    "status": 200,
+    "note": "heal_1",
+    "resp": {
+      "status": "ok",
+      "tip": 1,
+      "balance": 199,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:54:05.807253",
+    "method": "POST",
+    "path": "/mix",
+    "status": 200,
+    "note": "deadman_2",
+    "resp": {
+      "status": "ok",
+      "drink": "Мертвец",
+      "price": 0,
+      "secret": true,
+      "effect": "balance_doubled",
+      "balance": 398,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:54:05.893615",
+    "method": "POST",
+    "path": "/tip",
+    "status": 200,
+    "note": "heal_2",
+    "resp": {
+      "status": "ok",
+      "tip": 1,
+      "balance": 397,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:54:06.301578",
+    "method": "POST",
+    "path": "/mix",
+    "status": 200,
+    "note": "deadman_3",
+    "resp": {
+      "status": "ok",
+      "drink": "Мертвец",
+      "price": 0,
+      "secret": true,
+      "effect": "balance_doubled",
+      "balance": 794,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:54:06.390797",
+    "method": "POST",
+    "path": "/tip",
+    "status": 200,
+    "note": "heal_3",
+    "resp": {
+      "status": "ok",
+      "tip": 1,
+      "balance": 793,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:54:06.786885",
+    "method": "POST",
+    "path": "/mix",
+    "status": 200,
+    "note": "deadman_4",
+    "resp": {
+      "status": "ok",
+      "drink": "Мертвец",
+      "price": 0,
+      "secret": true,
+      "effect": "balance_doubled",
+      "balance": 1586,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:54:06.874841",
+    "method": "POST",
+    "path": "/tip",
+    "status": 200,
+    "note": "heal_4",
+    "resp": {
+      "status": "ok",
+      "tip": 1,
+      "balance": 1585,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:54:07.297917",
+    "method": "POST",
+    "path": "/mix",
+    "status": 200,
+    "note": "deadman_5",
+    "resp": {
+      "status": "ok",
+      "drink": "Мертвец",
+      "price": 0,
+      "secret": true,
+      "effect": "balance_doubled",
+      "balance": 3170,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:54:07.382938",
+    "method": "POST",
+    "path": "/tip",
+    "status": 200,
+    "note": "heal_5",
+    "resp": {
+      "status": "ok",
+      "tip": 1,
+      "balance": 3169,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:54:07.797013",
+    "method": "POST",
+    "path": "/mix",
+    "status": 200,
+    "note": "deadman_6",
+    "resp": {
+      "status": "ok",
+      "drink": "Мертвец",
+      "price": 0,
+      "secret": true,
+      "effect": "balance_doubled",
+      "balance": 6338,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:54:07.886688",
+    "method": "POST",
+    "path": "/tip",
+    "status": 200,
+    "note": "heal_6",
+    "resp": {
+      "status": "ok",
+      "tip": 1,
+      "balance": 6337,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:54:08.296600",
+    "method": "POST",
+    "path": "/mix",
+    "status": 200,
+    "note": "deadman_7",
+    "resp": {
+      "status": "ok",
+      "drink": "Мертвец",
+      "price": 0,
+      "secret": true,
+      "effect": "balance_doubled",
+      "balance": 12674,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:54:08.391558",
+    "method": "POST",
+    "path": "/tip",
+    "status": 200,
+    "note": "heal_7",
+    "resp": {
+      "status": "ok",
+      "tip": 1,
+      "balance": 12673,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:54:08.806278",
+    "method": "POST",
+    "path": "/mix",
+    "status": 200,
+    "note": "deadman_8",
+    "resp": {
+      "status": "ok",
+      "drink": "Мертвец",
+      "price": 0,
+      "secret": true,
+      "effect": "balance_doubled",
+      "balance": 25346,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:54:08.892103",
+    "method": "POST",
+    "path": "/tip",
+    "status": 200,
+    "note": "heal_8",
+    "resp": {
+      "status": "ok",
+      "tip": 1,
+      "balance": 25345,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:54:09.324596",
+    "method": "POST",
+    "path": "/mix",
+    "status": 200,
+    "note": "deadman_9",
+    "resp": {
+      "status": "ok",
+      "drink": "Мертвец",
+      "price": 0,
+      "secret": true,
+      "effect": "balance_doubled",
+      "balance": 50690,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:54:09.413442",
+    "method": "POST",
+    "path": "/tip",
+    "status": 200,
+    "note": "heal_9",
+    "resp": {
+      "status": "ok",
+      "tip": 1,
+      "balance": 50689,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:54:09.828312",
+    "method": "POST",
+    "path": "/mix",
+    "status": 200,
+    "note": "deadman_10",
+    "resp": {
+      "status": "ok",
+      "drink": "Мертвец",
+      "price": 0,
+      "secret": true,
+      "effect": "balance_doubled",
+      "balance": 101378,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:54:09.914781",
+    "method": "POST",
+    "path": "/tip",
+    "status": 200,
+    "note": "heal_10",
+    "resp": {
+      "status": "ok",
+      "tip": 1,
+      "balance": 101377,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:54:10.324380",
+    "method": "GET",
+    "path": "/balance",
+    "status": 200,
+    "note": "check_bal",
+    "resp": {
+      "status": "ok",
+      "balance": 101377,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:54:10.481124",
+    "method": "GET",
+    "path": "/menu",
+    "status": 200,
+    "note": "get_menu",
+    "resp": {
+      "status": "ok",
+      "drinks": [
+        {
+          "name": "Куба Либре",
+          "price": 23,
+          "ingredients": [
+            "кола",
+            "лёд",
+            "ром"
+          ]
+        },
+        {
+          "name": "Отвёртка",
+          "price": 18,
+          "ingredients": [
+            "водка",
+            "сок"
+          ]
+        },
+        {
+          "name": "Джин-тоник",
+          "price": 21,
+          "ingredients": [
+            "джин",
+            "лёд",
+            "тоник"
+          ]
+        },
+        {
+          "name": "Виски-кола",
+          "price": 20,
+          "ingredients": [
+            "виски",
+            "кола"
+          ]
+        },
+        {
+          "name": "Текила-санрайз",
+          "price": 21,
+          "ingredients": [
+            "сок",
+            "текила"
+          ]
+        },
+        {
+          "name": "Русский",
+          "price": 15,
+          "ingredients": [
+            "водка",
+            "лёд"
+          ]
+        },
+        {
+          "name": "Белый русский",
+          "price": 24,
+          "ingredients": [
+            "водка",
+            "лёд",
+            "молоко"
+          ]
+        },
+        {
+          "name": "Лонг-Айленд",
+          "price": 38,
+          "ingredients": [
+            "водка",
+            "джин",
+            "кола",
+            "ром",
+            "текила"
+          ]
+        }
+      ],
+      "balance": 101377,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:54:10.571286",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_1",
+    "resp": {
+      "status": "ok",
+      "drink": "Куба Либре",
+      "price": 23,
+      "balance": 101354,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:54:11.078074",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_2",
+    "resp": {
+      "status": "ok",
+      "drink": "Отвёртка",
+      "price": 18,
+      "balance": 101336,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:54:11.594835",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_3",
+    "resp": {
+      "status": "ok",
+      "drink": "Джин-тоник",
+      "price": 21,
+      "balance": 101315,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:54:12.110669",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_4",
+    "resp": {
+      "status": "ok",
+      "drink": "Виски-кола",
+      "price": 0,
+      "free_every_7th": true,
+      "balance": 101315,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:54:12.628399",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_5",
+    "resp": {
+      "status": "ok",
+      "drink": "Текила-санрайз",
+      "price": 20,
+      "balance": 101295,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:54:12.713875",
+    "method": "GET",
+    "path": "/profile",
+    "status": 200,
+    "note": "prof_step_5",
+    "resp": {
+      "status": "ok",
+      "id": "BAR-0597",
+      "rank": "Постоянный",
+      "total_orders": 15,
+      "unique_drinks": 6,
+      "favorite_drink": "Мертвец",
+      "bar_closed": false
+    }
+  },
+  {
+    "ts": "2026-04-25T13:54:13.220050",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_6",
+    "resp": {
+      "status": "ok",
+      "drink": "Русский",
+      "price": 14,
+      "balance": 101281,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:54:13.739788",
+    "method": "POST",
+    "path": "/order",
+    "status": 429,
+    "note": "order_7",
+    "resp": {
+      "status": "error",
+      "error": "rate_limit",
+      "retry_after": 52
+    }
+  },
+  {
+    "ts": "2026-04-25T13:55:06.671323",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_7",
+    "resp": {
+      "status": "error",
+      "error": "refused",
+      "drink": "Белый русский",
+      "balance": 101281,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:55:07.179571",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_8",
+    "resp": {
+      "status": "error",
+      "error": "refused",
+      "drink": "Лонг-Айленд",
+      "balance": 101281,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:55:07.715898",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_9",
+    "resp": {
+      "status": "ok",
+      "drink": "Куба Либре",
+      "price": 21,
+      "balance": 101260,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:55:08.210594",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_10",
+    "resp": {
+      "status": "ok",
+      "drink": "Отвёртка",
+      "price": 17,
+      "balance": 101243,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:55:08.292108",
+    "method": "GET",
+    "path": "/profile",
+    "status": 200,
+    "note": "prof_step_10",
+    "resp": {
+      "status": "ok",
+      "id": "BAR-0597",
+      "rank": "Постоянный",
+      "total_orders": 18,
+      "unique_drinks": 7,
+      "favorite_drink": "Мертвец",
+      "bar_closed": false
+    }
+  },
+  {
+    "ts": "2026-04-25T13:55:09.052579",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_11",
+    "resp": {
+      "status": "ok",
+      "drink": "Джин-тоник",
+      "price": 20,
+      "balance": 101223,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:55:09.562627",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_12",
+    "resp": {
+      "status": "ok",
+      "drink": "Виски-кола",
+      "price": 18,
+      "balance": 101205,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:55:10.059753",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_13",
+    "resp": {
+      "status": "ok",
+      "drink": "Текила-санрайз",
+      "price": 0,
+      "free_every_7th": true,
+      "balance": 101205,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:55:10.551924",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_14",
+    "resp": {
+      "status": "ok",
+      "drink": "Русский",
+      "price": 14,
+      "balance": 101191,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:55:11.068594",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_15",
+    "resp": {
+      "status": "error",
+      "error": "refused",
+      "drink": "Белый русский",
+      "balance": 101191,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:55:11.210221",
+    "method": "GET",
+    "path": "/profile",
+    "status": 200,
+    "note": "prof_step_15",
+    "resp": {
+      "status": "ok",
+      "id": "BAR-0597",
+      "rank": "Постоянный",
+      "total_orders": 22,
+      "unique_drinks": 7,
+      "favorite_drink": "Мертвец",
+      "bar_closed": false
+    }
+  },
+  {
+    "ts": "2026-04-25T13:55:11.724718",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_16",
+    "resp": {
+      "status": "error",
+      "error": "refused",
+      "drink": "Лонг-Айленд",
+      "balance": 101191,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:55:12.245006",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_17",
+    "resp": {
+      "status": "ok",
+      "drink": "Куба Либре",
+      "price": 21,
+      "balance": 101170,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:55:12.760129",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_18",
+    "resp": {
+      "status": "ok",
+      "drink": "Отвёртка",
+      "price": 17,
+      "balance": 101153,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:55:13.277492",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_19",
+    "resp": {
+      "status": "ok",
+      "drink": "Джин-тоник",
+      "price": 20,
+      "balance": 101133,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:55:13.788804",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_20",
+    "resp": {
+      "status": "ok",
+      "drink": "Виски-кола",
+      "price": 18,
+      "balance": 101115,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:55:13.970151",
+    "method": "GET",
+    "path": "/profile",
+    "status": 200,
+    "note": "prof_step_20",
+    "resp": {
+      "status": "ok",
+      "id": "BAR-0597",
+      "rank": "Постоянный",
+      "total_orders": 26,
+      "unique_drinks": 7,
+      "favorite_drink": "Мертвец",
+      "bar_closed": false
+    }
+  },
+  {
+    "ts": "2026-04-25T13:55:14.480264",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_21",
+    "resp": {
+      "status": "ok",
+      "drink": "Текила-санрайз",
+      "price": 20,
+      "balance": 101095,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:55:14.995242",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_22",
+    "resp": {
+      "status": "ok",
+      "drink": "Русский",
+      "price": 0,
+      "free_every_7th": true,
+      "balance": 101095,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:55:15.492800",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_23",
+    "resp": {
+      "status": "error",
+      "error": "refused",
+      "drink": "Белый русский",
+      "balance": 101095,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:55:15.989666",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_24",
+    "resp": {
+      "status": "error",
+      "error": "refused",
+      "drink": "Лонг-Айленд",
+      "balance": 101095,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:55:16.498765",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_25",
+    "resp": {
+      "status": "ok",
+      "drink": "Куба Либре",
+      "price": 17,
+      "favorite": true,
+      "balance": 101078,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:55:16.578271",
+    "method": "GET",
+    "path": "/profile",
+    "status": 200,
+    "note": "prof_step_25",
+    "resp": {
+      "status": "ok",
+      "id": "BAR-0597",
+      "rank": "Постоянный",
+      "total_orders": 29,
+      "unique_drinks": 7,
+      "favorite_drink": "Мертвец",
+      "bar_closed": false
+    }
+  },
+  {
+    "ts": "2026-04-25T13:55:17.092753",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_26",
+    "resp": {
+      "status": "ok",
+      "drink": "Отвёртка",
+      "price": 12,
+      "favorite": true,
+      "balance": 101066,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:55:17.608846",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_27",
+    "resp": {
+      "status": "ok",
+      "drink": "Джин-тоник",
+      "price": 15,
+      "favorite": true,
+      "balance": 101051,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:55:18.128208",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_28",
+    "resp": {
+      "status": "ok",
+      "drink": "Виски-кола",
+      "price": 14,
+      "favorite": true,
+      "balance": 101037,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:55:18.639494",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_29",
+    "resp": {
+      "status": "ok",
+      "drink": "Текила-санрайз",
+      "price": 15,
+      "favorite": true,
+      "balance": 101022,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:55:19.157556",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_30",
+    "resp": {
+      "status": "ok",
+      "drink": "Русский",
+      "price": 9,
+      "favorite": true,
+      "balance": 101013,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:55:19.238484",
+    "method": "GET",
+    "path": "/profile",
+    "status": 200,
+    "note": "prof_step_30",
+    "resp": {
+      "status": "ok",
+      "id": "BAR-0597",
+      "rank": "Постоянный",
+      "total_orders": 34,
+      "unique_drinks": 7,
+      "favorite_drink": "Мертвец",
+      "bar_closed": false
+    }
+  },
+  {
+    "ts": "2026-04-25T13:55:19.737056",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_31",
+    "resp": {
+      "status": "error",
+      "error": "refused",
+      "drink": "Белый русский",
+      "balance": 101013,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:55:20.247514",
+    "method": "POST",
+    "path": "/order",
+    "status": 429,
+    "note": "order_32",
+    "resp": {
+      "status": "error",
+      "error": "rate_limit",
+      "retry_after": 47
+    }
+  },
+  {
+    "ts": "2026-04-25T13:56:08.126156",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_32",
+    "resp": {
+      "status": "error",
+      "error": "refused",
+      "drink": "Лонг-Айленд",
+      "balance": 101013,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:56:08.652267",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_33",
+    "resp": {
+      "status": "ok",
+      "drink": "Куба Либре",
+      "price": 0,
+      "free_every_7th": true,
+      "balance": 101013,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:56:09.170002",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_34",
+    "resp": {
+      "status": "ok",
+      "drink": "Отвёртка",
+      "price": 12,
+      "favorite": true,
+      "balance": 101001,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:56:09.779642",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_35",
+    "resp": {
+      "status": "ok",
+      "drink": "Джин-тоник",
+      "price": 15,
+      "favorite": true,
+      "balance": 100986,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:56:09.862808",
+    "method": "GET",
+    "path": "/profile",
+    "status": 200,
+    "note": "prof_step_35",
+    "resp": {
+      "status": "ok",
+      "id": "BAR-0597",
+      "rank": "Постоянный",
+      "total_orders": 37,
+      "unique_drinks": 7,
+      "favorite_drink": "Мертвец",
+      "bar_closed": false
+    }
+  },
+  {
+    "ts": "2026-04-25T13:56:10.368675",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_36",
+    "resp": {
+      "status": "ok",
+      "drink": "Виски-кола",
+      "price": 14,
+      "favorite": true,
+      "balance": 100972,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:56:10.871498",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_37",
+    "resp": {
+      "status": "ok",
+      "drink": "Текила-санрайз",
+      "price": 15,
+      "favorite": true,
+      "balance": 100957,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:56:11.401211",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_38",
+    "resp": {
+      "status": "ok",
+      "drink": "Русский",
+      "price": 9,
+      "favorite": true,
+      "balance": 100948,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:56:11.909151",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_39",
+    "resp": {
+      "status": "error",
+      "error": "refused",
+      "drink": "Белый русский",
+      "balance": 100948,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:56:12.431074",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_40",
+    "resp": {
+      "status": "error",
+      "error": "refused",
+      "drink": "Лонг-Айленд",
+      "balance": 100948,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:56:12.629034",
+    "method": "GET",
+    "path": "/profile",
+    "status": 200,
+    "note": "prof_step_40",
+    "resp": {
+      "status": "ok",
+      "id": "BAR-0597",
+      "rank": "Постоянный",
+      "total_orders": 40,
+      "unique_drinks": 7,
+      "favorite_drink": "Мертвец",
+      "bar_closed": false
+    }
+  },
+  {
+    "ts": "2026-04-25T13:56:13.127551",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_41",
+    "resp": {
+      "status": "ok",
+      "drink": "Куба Либре",
+      "price": 17,
+      "favorite": true,
+      "balance": 100931,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:56:13.635541",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_42",
+    "resp": {
+      "status": "ok",
+      "drink": "Отвёртка",
+      "price": 0,
+      "free_every_7th": true,
+      "balance": 100931,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:56:14.170587",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_43",
+    "resp": {
+      "status": "ok",
+      "drink": "Джин-тоник",
+      "price": 15,
+      "favorite": true,
+      "balance": 100916,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:56:14.687501",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_44",
+    "resp": {
+      "status": "ok",
+      "drink": "Виски-кола",
+      "price": 14,
+      "favorite": true,
+      "balance": 100902,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:56:15.192480",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_45",
+    "resp": {
+      "status": "ok",
+      "drink": "Текила-санрайз",
+      "price": 15,
+      "favorite": true,
+      "balance": 100887,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:56:15.307820",
+    "method": "GET",
+    "path": "/profile",
+    "status": 200,
+    "note": "prof_step_45",
+    "resp": {
+      "status": "ok",
+      "id": "BAR-0597",
+      "rank": "Постоянный",
+      "total_orders": 45,
+      "unique_drinks": 7,
+      "favorite_drink": "Мертвец",
+      "bar_closed": false
+    }
+  },
+  {
+    "ts": "2026-04-25T13:56:15.805516",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_46",
+    "resp": {
+      "status": "ok",
+      "drink": "Русский",
+      "price": 9,
+      "favorite": true,
+      "balance": 100878,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:56:16.308122",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_47",
+    "resp": {
+      "status": "error",
+      "error": "refused",
+      "drink": "Белый русский",
+      "balance": 100878,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:56:16.812185",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_48",
+    "resp": {
+      "status": "error",
+      "error": "refused",
+      "drink": "Лонг-Айленд",
+      "balance": 100878,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:56:17.332291",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_49",
+    "resp": {
+      "status": "ok",
+      "drink": "Куба Либре",
+      "price": 17,
+      "favorite": true,
+      "balance": 100861,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:56:17.850356",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_50",
+    "resp": {
+      "status": "ok",
+      "drink": "Отвёртка",
+      "price": 12,
+      "favorite": true,
+      "balance": 100849,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:56:17.964754",
+    "method": "GET",
+    "path": "/profile",
+    "status": 200,
+    "note": "prof_step_50",
+    "resp": {
+      "status": "ok",
+      "id": "BAR-0597",
+      "rank": "Постоянный",
+      "total_orders": 48,
+      "unique_drinks": 7,
+      "favorite_drink": "Мертвец",
+      "bar_closed": false
+    }
+  },
+  {
+    "ts": "2026-04-25T13:56:18.471692",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_51",
+    "resp": {
+      "status": "ok",
+      "drink": "Джин-тоник",
+      "price": 0,
+      "free_every_7th": true,
+      "balance": 100849,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:56:18.983649",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_52",
+    "resp": {
+      "status": "ok",
+      "drink": "Виски-кола",
+      "price": 14,
+      "favorite": true,
+      "balance": 100835,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:56:19.503801",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_53",
+    "resp": {
+      "status": "ok",
+      "drink": "Текила-санрайз",
+      "price": 15,
+      "favorite": true,
+      "balance": 100820,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:56:20.002172",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "order_54",
+    "resp": {
+      "status": "ok",
+      "drink": "Русский",
+      "price": 9,
+      "favorite": true,
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:56:20.526863",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "hidden_Мокрый",
+    "resp": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:56:20.932792",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "hidden_Слеза",
+    "resp": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:56:21.351094",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "hidden_Последний",
+    "resp": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:56:21.760174",
+    "method": "POST",
+    "path": "/order",
+    "status": 429,
+    "note": "hidden_Завтрак",
+    "resp": {
+      "status": "error",
+      "error": "rate_limit",
+      "retry_after": 47
+    }
+  },
+  {
+    "ts": "2026-04-25T13:57:09.714797",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "hidden_Завтрак",
+    "resp": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:57:10.123674",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "hidden_Кровавая Мэри",
+    "resp": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:57:10.509930",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "hidden_Маргарита",
+    "resp": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:57:10.918687",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "hidden_Мохито",
+    "resp": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:57:11.324533",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "hidden_Дайкири",
+    "resp": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:57:11.717963",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "hidden_Негрони",
+    "resp": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:57:12.128382",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "hidden_Олд фэшн",
+    "resp": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:57:12.539945",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "hidden_Манхэттен",
+    "resp": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:57:12.928442",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "hidden_Май Тай",
+    "resp": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:57:13.341965",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "hidden_Пина колада",
+    "resp": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:57:13.749776",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "hidden_Апероль шприц",
+    "resp": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:57:14.160379",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "hidden_Белая русская",
+    "resp": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:57:14.573443",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "hidden_Чёрный русский",
+    "resp": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:57:14.999697",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "hidden_Горячий шоколад",
+    "resp": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:57:15.388316",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "hidden_Чай",
+    "resp": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:57:15.822950",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "hidden_Кофе",
+    "resp": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:57:16.232264",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "hidden_Вода",
+    "resp": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:57:16.628699",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "hidden_Сода",
+    "resp": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:57:17.036117",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "hidden_Лимонад",
+    "resp": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:57:17.448532",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "hidden_Энергетик",
+    "resp": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:57:17.843146",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "hidden_Мёртвец",
+    "resp": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:57:18.231315",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "hidden_Аррмагеддон",
+    "resp": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:57:18.624107",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "hidden_Воздух",
+    "resp": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:57:19.028408",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "hidden_Секрет",
+    "resp": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:57:19.416542",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "hidden_Спецзаказ",
+    "resp": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:57:19.811635",
+    "method": "POST",
+    "path": "/order",
+    "status": 200,
+    "note": "hidden_Для своих",
+    "resp": {
+      "status": "error",
+      "error": "unknown_drink",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:57:20.213816",
+    "method": "POST",
+    "path": "/mix",
+    "status": 200,
+    "note": "mix3_('водка', 'ром', 'текила')",
+    "resp": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:57:20.535915",
+    "method": "POST",
+    "path": "/mix",
+    "status": 200,
+    "note": "mix3_('водка', 'ром', 'виски')",
+    "resp": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:57:20.833270",
+    "method": "POST",
+    "path": "/mix",
+    "status": 429,
+    "note": "mix3_('водка', 'ром', 'джин')",
+    "resp": {
+      "status": "error",
+      "error": "rate_limit",
+      "retry_after": 1
+    }
+  },
+  {
+    "ts": "2026-04-25T13:57:22.449356",
+    "method": "POST",
+    "path": "/mix",
+    "status": 200,
+    "note": "mix3_('водка', 'ром', 'джин')",
+    "resp": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:57:22.760179",
+    "method": "POST",
+    "path": "/mix",
+    "status": 200,
+    "note": "mix3_('водка', 'ром', 'кола')",
+    "resp": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:57:23.058482",
+    "method": "POST",
+    "path": "/mix",
+    "status": 429,
+    "note": "mix3_('водка', 'ром', 'сок')",
+    "resp": {
+      "status": "error",
+      "error": "rate_limit",
+      "retry_after": 47
+    }
+  },
+  {
+    "ts": "2026-04-25T13:58:10.966173",
+    "method": "POST",
+    "path": "/mix",
+    "status": 200,
+    "note": "mix3_('водка', 'ром', 'сок')",
+    "resp": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:58:11.276209",
+    "method": "POST",
+    "path": "/mix",
+    "status": 200,
+    "note": "mix3_('водка', 'ром', 'тоник')",
+    "resp": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:58:11.596918",
+    "method": "POST",
+    "path": "/mix",
+    "status": 200,
+    "note": "mix3_('водка', 'ром', 'лёд')",
+    "resp": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:58:11.904662",
+    "method": "POST",
+    "path": "/mix",
+    "status": 200,
+    "note": "mix3_('водка', 'текила', 'виски')",
+    "resp": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:58:12.225729",
+    "method": "POST",
+    "path": "/mix",
+    "status": 200,
+    "note": "mix3_('водка', 'текила', 'джин')",
+    "resp": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:58:12.553407",
+    "method": "POST",
+    "path": "/mix",
+    "status": 200,
+    "note": "mix3_('водка', 'текила', 'кола')",
+    "resp": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:58:12.849439",
+    "method": "POST",
+    "path": "/mix",
+    "status": 200,
+    "note": "mix3_('водка', 'текила', 'сок')",
+    "resp": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:58:13.166819",
+    "method": "POST",
+    "path": "/mix",
+    "status": 200,
+    "note": "mix3_('водка', 'текила', 'тоник')",
+    "resp": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:58:13.485550",
+    "method": "POST",
+    "path": "/mix",
+    "status": 200,
+    "note": "mix3_('водка', 'текила', 'лёд')",
+    "resp": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:58:13.797595",
+    "method": "POST",
+    "path": "/mix",
+    "status": 200,
+    "note": "mix3_('водка', 'текила', 'молоко')",
+    "resp": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:58:14.089558",
+    "method": "POST",
+    "path": "/mix",
+    "status": 200,
+    "note": "mix3_('водка', 'виски', 'джин')",
+    "resp": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:58:14.403023",
+    "method": "POST",
+    "path": "/mix",
+    "status": 200,
+    "note": "mix3_('водка', 'виски', 'кола')",
+    "resp": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:58:14.721392",
+    "method": "POST",
+    "path": "/mix",
+    "status": 200,
+    "note": "mix3_('водка', 'виски', 'сок')",
+    "resp": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:58:15.040087",
+    "method": "POST",
+    "path": "/mix",
+    "status": 200,
+    "note": "mix3_('водка', 'виски', 'тоник')",
+    "resp": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:58:15.352293",
+    "method": "POST",
+    "path": "/mix",
+    "status": 429,
+    "note": "mix3_('водка', 'виски', 'лёд')",
+    "resp": {
+      "status": "error",
+      "error": "rate_limit",
+      "retry_after": 1
+    }
+  },
+  {
+    "ts": "2026-04-25T13:58:16.946406",
+    "method": "POST",
+    "path": "/mix",
+    "status": 200,
+    "note": "mix3_('водка', 'виски', 'лёд')",
+    "resp": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:58:17.257253",
+    "method": "POST",
+    "path": "/mix",
+    "status": 200,
+    "note": "mix3_('водка', 'виски', 'молоко')",
+    "resp": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:58:17.567976",
+    "method": "POST",
+    "path": "/mix",
+    "status": 200,
+    "note": "mix3_('водка', 'джин', 'кола')",
+    "resp": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:58:17.863391",
+    "method": "POST",
+    "path": "/mix",
+    "status": 200,
+    "note": "mix3_('водка', 'джин', 'сок')",
+    "resp": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:58:18.175237",
+    "method": "POST",
+    "path": "/mix",
+    "status": 200,
+    "note": "mix3_('водка', 'джин', 'тоник')",
+    "resp": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:58:18.486485",
+    "method": "POST",
+    "path": "/mix",
+    "status": 200,
+    "note": "mix3_('водка', 'джин', 'лёд')",
+    "resp": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:58:18.899808",
+    "method": "POST",
+    "path": "/mix",
+    "status": 200,
+    "note": "mix3_('водка', 'джин', 'молоко')",
+    "resp": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:58:19.218371",
+    "method": "POST",
+    "path": "/mix",
+    "status": 200,
+    "note": "mix3_('водка', 'кола', 'сок')",
+    "resp": {
+      "status": "error",
+      "error": "unknown_recipe",
+      "balance": 100811,
+      "mood_level": "hostile"
+    }
+  },
+  {
+    "ts": "2026-04-25T13:58:19.413146",
+    "method": "GET",
+    "path": "/profile",
+    "status": 200,
+    "note": "final",
+    "resp": {
+      "status": "ok",
+      "id": "BAR-0597",
+      "rank": "Постоянный",
+      "total_orders": 52,
+      "unique_drinks": 7,
+      "favorite_drink": "Мертвец",
+      "bar_closed": false
+    }
+  }
+]

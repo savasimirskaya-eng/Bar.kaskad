@@ -1,234 +1,342 @@
-import asyncio
-import httpx
-import json
-import itertools
-from datetime import datetime
-from typing import List, Dict, Any
+import time
+import uuid
+import math
+import datetime
+from typing import List, Optional, Dict, Any
+from collections import defaultdict
 
-BASE_URL = "https://bar.antihype.lol"
-OUTPUT_FILE = "test_results.json"
-INGREDIENTS = ["водка", "ром", "текила", "виски", "джин", "кола", "сок", "тоник", "лёд", "молоко"]
+from fastapi import FastAPI, Request, Header, Depends, HTTPException
+from fastapi.responses import JSONResponse
+from pydantic import BaseModel, Field, ValidationError
 
-class BartenderExplorer:
-    def __init__(self, num_accounts: int = 2):
-        self.num_accounts = num_accounts
-        self.accounts: List[Dict] = []
-        self.results: List[Dict] = []
-        self.client = httpx.AsyncClient(http2=True, timeout=30.0, follow_redirects=True)
-        self.max_retries = 5
-        self.safe_delay = 2.0
-        self.last_state = {}
+app = FastAPI(title="Black Bartender Clone")
 
-    async def _handle_rate_limit(self, data: Any, context: str) -> bool:
-        if isinstance(data, dict) and data.get("error") == "rate_limit":
-            wait = float(data.get("retry_after", 5)) + 0.5
-            print(f"⏳ Rate limit {context}. Ожидание {wait:.1f} сек...")
-            await asyncio.sleep(wait)
-            return True
-        return False
+# --- Конфигурация и Данные ---
+VALID_INGREDIENTS = {"водка", "ром", "текила", "виски", "джин", "кола", "сок", "тоник", "лёд", "молоко"}
 
-    async def register_accounts(self):
-        print(f"[+] Регистрация {self.num_accounts} аккаунтов...")
-        for i in range(self.num_accounts):
-            for attempt in range(self.max_retries):
-                try:
-                    resp = await self.client.post(f"{BASE_URL}/register")
-                    data = resp.json()
-                    if data.get("status") == "ok" and "token" in data:
-                        self.accounts.append({"id": data["id"], "token": data["token"]})
-                        print(f"✅ Аккаунт {data['id']} зарегистрирован")
-                        await asyncio.sleep(self.safe_delay)
-                        break
-                    if await self._handle_rate_limit(data, f"аккаунт #{i + 1}"):
-                        continue
-                    print(f"[-] Ошибка регистрации: {data}")
-                    break
-                except Exception as e:
-                    print(f"[-] Сетевая ошибка: {e}")
-                    await asyncio.sleep(3)
+PRICES = {
+    "normal_day": {"Куба Либре": 15, "Отвёртка": 12, "Джин-тоник": 14, "Виски-кола": 13, "Текила-санрайз": 14,
+                   "Русский": 10, "Белый русский": 16, "Лонг-Айленд": 25},
+    "grumpy_day": {"Куба Либре": 18, "Отвёртка": 15, "Джин-тоник": 17, "Виски-кола": 16, "Текила-санрайз": 17,
+                   "Русский": 9, "Белый русский": 20, "Лонг-Айленд": 30},
+    "hostile_day": {"Куба Либре": 23, "Отвёртка": 18, "Джин-тоник": 21, "Виски-кола": 20, "Текила-санрайз": 21,
+                    "Русский": 15, "Белый русский": 24, "Лонг-Айленд": 38},
+    "normal_night": {"Ночной русский": 8, "Бессонница": 10, "Лунный свет": 12},
+    "grumpy_night": {"Ночной русский": 10, "Бессонница": 12, "Лунный свет": 15},
+    "hostile_night": {"Ночной русский": 12, "Бессонница": 15, "Лунный свет": 18}
+}
 
-    async def make_request(self, acc: Dict, method: str, path: str, headers: Dict = None, payload: Any = None, note: str = "") -> Any:
-        url = f"{BASE_URL}{path}"
-        req_headers = {"Authorization": f"Bearer {acc['token']}", "Content-Type": "application/json"}
-        if headers: req_headers.update(headers)
+MIX_RECIPES = {
+    frozenset(["водка", "сок"]): "Отвёртка",
+    frozenset(["водка", "лёд"]): "Русский",
+    frozenset(["текила", "сок"]): "Текила-санрайз",
+    frozenset(["виски", "кола"]): "Виски-кола",
+    frozenset(["кола", "лёд", "ром"]): "Куба Либре",
+    frozenset(["джин", "лёд", "тоник"]): "Джин-тоник",
+    frozenset(["водка", "джин", "кола", "ром", "текила"]): "Лонг-Айленд",
+    frozenset(["водка", "лёд", "молоко"]): "Белый русский",
+    # Секретные
+    frozenset(["водка", "молоко", "ром"]): "Мертвец",
+    frozenset(["лёд", "молоко", "текила"]): "Ошибка бармена",
+    frozenset(["джин", "лёд", "сок", "тоник"]): "Зелье бармена",
+    frozenset(["виски", "водка", "джин", "ром", "текила"]): "Армагеддон"
+}
 
-        for attempt in range(3):
-            try:
-                if method.upper() == "GET":
-                    resp = await self.client.get(url, headers=req_headers)
-                elif method.upper() == "POST":
-                    resp = await self.client.post(url, headers=req_headers, json=payload)
-                else:
-                    resp = await self.client.request(method.upper(), url, headers=req_headers, json=payload)
+# Хранилище состояний
+USERS: Dict[str, dict] = {}
 
-                status = resp.status_code
-                try:
-                    body = resp.json()
-                except Exception:
-                    body = resp.text
 
-                entry = {
-                    "timestamp": datetime.now().isoformat(),
-                    "account_id": acc["id"],
-                    "method": method.upper(),
-                    "path": path,
-                    "payload": payload,
-                    "status_code": status,
-                    "response": body,
-                    "note": note
-                }
-                self.results.append(entry)
+# --- Модели запросов ---
+class OrderReq(BaseModel):
+    name: str
 
-                # Трекинг изменений состояния (баланс, настроение, ранг, закрытие)
-                if isinstance(body, dict) and status == 200:
-                    current_state = {k: body.get(k) for k in ["balance", "mood_level", "rank", "bar_closed"] if body.get(k) is not None}
-                    prev = self.last_state.get(acc["id"], {})
-                    changes = []
-                    for k, v in current_state.items():
-                        if prev.get(k) != v:
-                            changes.append(f"{k}: {prev.get(k)} → {v}")
-                    if changes:
-                        print(f"  🔄 {note:<25} | {' | '.join(changes)}")
-                    self.last_state[acc["id"]] = {**prev, **current_state}
 
-                if status == 429:
-                    if await self._handle_rate_limit(body, f"{method} {path}"):
-                        continue
-                    break
+class MixReq(BaseModel):
+    ingredients: List[str]
 
-                await asyncio.sleep(self.safe_delay)
-                return resp
 
-            except Exception as e:
-                self.results.append({
-                    "timestamp": datetime.now().isoformat(), "account_id": acc["id"],
-                    "method": method, "path": path, "error": str(e), "note": note
-                })
-                break
-        return None
+class TipReq(BaseModel):
+    amount: int
 
-    # --- ТЕСТЫ ---
-    async def test_standard_flow(self, acc):
-        print(f"[▶] Стандартный флоу: {acc['id']}")
-        t = {"X-Time": "14:30"}
-        await self.make_request(acc, "GET", "/menu", headers=t, note="menu_day")
-        await self.make_request(acc, "POST", "/order", payload={"name": "Русский"}, headers=t, note="order_стандарт")
-        await self.make_request(acc, "POST", "/mix", payload={"ingredients": ["водка", "лёд"]}, headers=t, note="mix_стандарт")
-        await self.make_request(acc, "GET", "/balance", note="balance")
-        await self.make_request(acc, "POST", "/tip", payload={"amount": 5}, note="tip_5")
-        await self.make_request(acc, "GET", "/history", note="history")
-        await self.make_request(acc, "GET", "/profile", note="profile")
 
-    async def test_tip_advanced(self, acc):
-        print(f"[▶] Продвинутые чаевые: {acc['id']}")
-        # 1. Точный баланс
-        await self.make_request(acc, "POST", "/reset", note="reset_tip_1")
-        await self.make_request(acc, "POST", "/tip", payload={"amount": 100}, note="tip_exact_100")
-        await self.make_request(acc, "GET", "/balance", note="bal_after_exact")
+# --- Вспомогательные функции ---
+def get_user(token: str):
+    if token not in USERS:
+        raise HTTPException(status_code=401, detail={"status": "error", "error": "unauthorized"})
+    return USERS[token]
 
-        # 2. Чаевые при 0 (после Армагеддона)
-        await self.make_request(acc, "POST", "/mix", payload={"ingredients": ["водка", "ром", "текила", "виски", "джин"]}, note="armageddon_for_tip")
-        await self.make_request(acc, "POST", "/tip", payload={"amount": 5}, note="tip_on_zero")
-        await self.make_request(acc, "POST", "/tip", payload={"amount": -10}, note="tip_negative")
 
-        # 3. Восстановление настроения
-        await self.make_request(acc, "POST", "/reset", note="reset_mood")
-        for _ in range(4):
-            await self.make_request(acc, "POST", "/mix", payload={"ingredients": ["foo"]}, note="err_make_hostile")
-        await self.make_request(acc, "GET", "/profile", note="profile_hostile")
-        await self.make_request(acc, "POST", "/tip", payload={"amount": 10}, note="tip_heal_small")
-        await self.make_request(acc, "GET", "/profile", note="profile_after_small_tip")
-        await self.make_request(acc, "POST", "/tip", payload={"amount": 90}, note="tip_heal_big")
-        await self.make_request(acc, "GET", "/profile", note="profile_after_big_tip")
+def parse_xtime(x_time: Optional[str]) -> str:
+    if not x_time or not isinstance(x_time, str):
+        return "12:00"
+    try:
+        h, m = map(int, x_time.split(":"))
+        if 0 <= h < 24 and 0 <= m < 60:
+            return x_time
+    except:
+        pass
+    return "12:00"
 
-        # 4. Дробные числа и граничные значения
-        await self.make_request(acc, "POST", "/reset", note="reset_floats")
-        for amt in [0.01, 0.5, 1.5, 10.99, 99.99, 0]:
-            await self.make_request(acc, "POST", "/tip", payload={"amount": amt}, note=f"tip_{amt}")
-        await self.make_request(acc, "GET", "/balance", note="bal_after_floats")
 
-        # 5. Частые чаевые (анти-спам)
-        await self.make_request(acc, "POST", "/reset", note="reset_spam")
-        for i in range(5):
-            await self.make_request(acc, "POST", "/tip", payload={"amount": 1}, note=f"tip_spam_{i}")
+def is_night(time_str: str) -> bool:
+    h = int(time_str.split(":")[0])
+    return 0 <= h < 6
 
-        await self.make_request(acc, "POST", "/reset", note="cleanup_tips")
 
-    async def test_time_variations(self, acc):
-        print(f"[▶] Вариации времени: {acc['id']}")
-        times = ["00:00", "06:00", "12:00", "18:00", "23:59", "24:00", "13:60", "foo", "", "00:01", "05:59"]
-        for t in times:
-            hdrs = {"X-Time": t} if t else {}
-            await self.make_request(acc, "GET", "/menu", headers=hdrs, note=f"menu_{t or 'no_time'}")
-            await self.make_request(acc, "POST", "/order", payload={"name": "Русский"}, headers=hdrs, note=f"order_{t or 'no_time'}")
+def get_price_table(mood: str, night: bool) -> dict:
+    key = f"{mood}_{'night' if night else 'day'}"
+    return PRICES.get(key, PRICES["normal_day"])
 
-    async def test_edge_cases(self, acc):
-        print(f"[▶] Граничные случаи: {acc['id']}")
-        t = {"X-Time": "14:30"}
-        await self.make_request(acc, "POST", "/order", payload={"name": ""}, headers=t, note="empty_order")
-        await self.make_request(acc, "POST", "/order", payload={"drink": "Русский"}, headers=t, note="wrong_key_order")
-        await self.make_request(acc, "POST", "/mix", payload={"ingredients": []}, headers=t, note="empty_mix")
-        await self.make_request(acc, "POST", "/order", payload={"ingredients": ["водка", "лёд"]}, headers=t, note="order_as_mix")
-        await self.make_request(acc, "POST", "/mix", payload={"name": "Русский"}, headers=t, note="mix_as_order")
 
-    async def test_hidden_endpoints(self, acc):
-        print(f"[▶] Скрытые эндпоинты: {acc['id']}")
-        paths = ["/secret", "/admin", "/health", "/status", "/mood", "/rank", "/inventory", "/chat", "/talk", "/help",
-                 "/version", "/config", "/debug", "/hint", "/recipe", "/about", "/api", "/swagger", "/docs", "/info",
-                 "/state", "/settings", "/tips", "/achievements", "/leaderboard", "/daily", "/bonus", "/gift",
-                 "/surprise", "/bartender", "/mood/set", "/mood/get", "/reset", "/flush", "/cache", "/stats", "/flag", "/key"]
-        for p in paths:
-            await self.make_request(acc, "GET", p, note=f"get_{p}")
-            await self.make_request(acc, "POST", p, payload={}, note=f"post_{p}")
+def update_mood(user: dict, delta: int):
+    user["mood_score"] = max(0, min(10, user["mood_score"] + delta))
+    s = user["mood_score"]
+    if s >= 8:
+        user["mood"] = "friendly"
+    elif s >= 5:
+        user["mood"] = "normal"
+    elif s >= 3:
+        user["mood"] = "grumpy"
+    else:
+        user["mood"] = "hostile"
 
-    async def test_mix_combos(self, acc):
-        print(f"[▶] Перебор миксов (пары): {acc['id']}")
-        t = {"X-Time": "14:30"}
-        for ing1, ing2 in itertools.combinations(INGREDIENTS, 2):
-            await self.make_request(acc, "POST", "/mix", payload={"ingredients": [ing1, ing2]}, headers=t, note=f"mix_{ing1}_{ing2}")
 
-    async def run(self):
-        await self.register_accounts()
-        if not self.accounts:
-            print("[-] Не удалось зарегистрировать аккаунты.")
-            return
+def get_rank(unique: int) -> str:
+    if unique == 0: return "Новичок"
+    if unique <= 2: return "Гость"
+    if unique <= 5: return "Постоянный"
+    return "Ветеран"
 
-        print("[+] Запуск тестов...")
-        for acc in self.accounts:
-            await self.test_standard_flow(acc)
-            await self.test_tip_advanced(acc)  # 🔥 НОВЫЙ МОДУЛЬ
-            await self.test_time_variations(acc)
-            await self.test_edge_cases(acc)
-            await self.test_hidden_endpoints(acc)
-            await self.test_mix_combos(acc)
-            await self.make_request(acc, "POST", "/reset", note="cleanup")
-            print(f"✅ Тесты для {acc['id']} завершены.\n")
 
-        self.save_results()
-        await self.client.aclose()
+def get_favorite(drink_counts: dict) -> Optional[str]:
+    if not drink_counts: return None
+    return max(drink_counts.items(), key=lambda x: x[1])[0]
 
-    def save_results(self):
-        with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-            json.dump(self.results, f, ensure_ascii=False, indent=2)
 
-        print(f"\n[💾] Результаты: {OUTPUT_FILE} ({len(self.results)} запросов)")
-        interesting = [r for r in self.results if r.get("status_code") not in (200, 400, 401, 404, 405, 429) or
-                       (isinstance(r.get("response"), dict) and set(r["response"].keys()) - {"status", "error",
-                                                                                          "balance", "mood_level",
-                                                                                          "id", "token", "drinks",
-                                                                                          "orders", "rank",
-                                                                                          "total_orders",
-                                                                                          "unique_drinks",
-                                                                                          "favorite_drink",
-                                                                                          "bar_closed", "price",
-                                                                                          "name", "ingredients",
-                                                                                          "method", "tip", "drink",
-                                                                                          "hint", "secret", "code",
-                                                                                          "message", "data", "result"})]
+def check_rate_limit(user: dict, limit: int = 30, window: int = 60):
+    now = time.time()
+    user["requests"] = [t for t in user["requests"] if now - t < window]
+    if len(user["requests"]) >= limit:
+        wait = round(window - (now - user["requests"][0]))
+        raise HTTPException(status_code=429,
+                            detail={"status": "error", "error": "rate_limit", "retry_after": max(1, wait)})
+    user["requests"].append(now)
 
-        print(f"[🔍] Найдено {len(interesting)} нестандартных ответов:")
-        for r in interesting[:10]:
-            print(f"  📌 {r['note']:25} | {r['method']} {r['path']:<15} | Status: {r['status_code']} | Keys: {list(r['response'].keys()) if isinstance(r['response'], dict) else 'text'}")
+
+def check_bar_closed(user: dict):
+    if user["bar_closed_until"] > time.time():
+        reopen = datetime.datetime.fromtimestamp(user["bar_closed_until"]).strftime("%H:%M")
+        return JSONResponse(status_code=200, content={
+            "status": "error", "error": "bar_closed", "reopens_at": reopen,
+            "balance": user["balance"], "mood_level": user["mood"]
+        })
+    return None
+
+
+# --- Зависимости ---
+async def get_auth_user(request: Request, x_time: Optional[str] = Header(None)):
+    auth = request.headers.get("authorization", "")
+    token = auth.replace("Bearer ", "").strip()
+    if not token or token not in USERS:
+        raise HTTPException(status_code=401, detail={"status": "error", "error": "unauthorized"})
+    user = USERS[token]
+    user["x_time"] = parse_xtime(x_time)
+    check_rate_limit(user)
+    return user
+
+
+# --- Эндпоинты ---
+@app.post("/register")
+async def register():
+    uid = f"BAR-{uuid.uuid4().hex[:4].upper()}"
+    token = uuid.uuid4().hex
+    USERS[token] = {
+        "id": uid, "balance": 100, "mood": "normal", "mood_score": 5,
+        "history": [], "drink_counts": defaultdict(int), "total_orders": 0,
+        "bar_closed_until": 0, "requests": [], "x_time": "12:00",
+        "secret_unlocked": False
+    }
+    return {"status": "ok", "id": uid, "token": token}
+
+
+@app.post("/reset")
+async def reset(user: dict = Depends(get_auth_user)):
+    user.update({"balance": 100, "mood": "normal", "mood_score": 5, "history": [],
+                 "drink_counts": defaultdict(int), "total_orders": 0,
+                 "bar_closed_until": 0, "secret_unlocked": False})
+    return {"status": "ok"}
+
+
+@app.get("/menu")
+async def menu(user: dict = Depends(get_auth_user)):
+    blocked = check_bar_closed(user)
+    if blocked: return blocked
+
+    night = is_night(user["x_time"])
+    prices = get_price_table(user["mood"], night)
+    drinks = []
+    for name, price in prices.items():
+        ing = [ing for ing in MIX_RECIPES.keys() if any(name in MIX_RECIPES[k] for k in [ing])][0] if not night else []
+        # Восстанавливаем ингредиенты из базы или хардкодим для скорости
+        if not night:
+            ing_map = {
+                "Куба Либре": ["кола", "лёд", "ром"], "Отвёртка": ["водка", "сок"],
+                "Джин-тоник": ["джин", "лёд", "тоник"], "Виски-кола": ["виски", "кола"],
+                "Текила-санрайз": ["сок", "текила"], "Русский": ["водка", "лёд"],
+                "Белый русский": ["водка", "лёд", "молоко"], "Лонг-Айленд": ["водка", "джин", "кола", "ром", "текила"]
+            }
+            ing = ing_map.get(name, [])
+        else:
+            ing_map = {"Ночной русский": ["водка", "лёд", "молоко"], "Бессонница": ["кола", "ром", "тоник"],
+                       "Лунный свет": ["джин", "сок", "тоник"]}
+            ing = ing_map.get(name, [])
+
+        drinks.append({"name": name, "price": price, "ingredients": ing})
+    return {"status": "ok", "drinks": drinks, "balance": user["balance"], "mood_level": user["mood"]}
+
+
+@app.post("/order")
+async def order(req: OrderReq, user: dict = Depends(get_auth_user)):
+    blocked = check_bar_closed(user)
+    if blocked: return blocked
+
+    if not req.name or req.name not in PRICES["normal_day"]:
+        update_mood(user, -1)
+        return {"status": "error", "error": "unknown_drink", "balance": user["balance"], "mood_level": user["mood"]}
+
+    night = is_night(user["x_time"])
+    price_table = get_price_table(user["mood"], night)
+    if req.name not in price_table:
+        # Дневной напиток ночью или наоборот
+        update_mood(user, -1)
+        return {"status": "error", "error": "unknown_drink", "balance": user["balance"], "mood_level": user["mood"]}
+
+    price = price_table[req.name]
+    user["total_orders"] += 1
+    user["drink_counts"][req.name] += 1
+
+    free = user["total_orders"] % 7 == 0
+    if free:
+        price = 0
+
+    if user["balance"] < price:
+        update_mood(user, -1)
+        return {"status": "error", "error": "insufficient_funds", "price": price, "balance": user["balance"],
+                "mood_level": user["mood"]}
+
+    user["balance"] -= price
+    user["history"].append({"drink": req.name, "price": price, "method": "order"})
+
+    resp = {"status": "ok", "drink": req.name, "price": price, "balance": user["balance"], "mood_level": user["mood"]}
+    if free: resp["free_every_7th"] = True
+    if user["drink_counts"][req.name] >= 2:
+        resp["favorite"] = (req.name == get_favorite(user["drink_counts"]))
+
+    return resp
+
+
+@app.post("/mix")
+async def mix(req: MixReq, user: dict = Depends(get_auth_user)):
+    blocked = check_bar_closed(user)
+    if blocked: return blocked
+
+    ingredients = [i.strip() for i in req.ingredients if i.strip()]
+    if not ingredients:
+        user["history"].append({"drink": "Воздух", "price": 0, "method": "mix"})
+        update_mood(user, -2)
+        return {"status": "ok", "drink": "Воздух", "price": 0, "balance": user["balance"], "mood_level": user["mood"]}
+
+    for ing in ingredients:
+        if ing not in VALID_INGREDIENTS:
+            update_mood(user, -1)
+            return {"status": "error", "error": "invalid_ingredient", "balance": user["balance"],
+                    "mood_level": user["mood"]}
+
+    key = frozenset(ingredients)
+    if key not in MIX_RECIPES:
+        update_mood(user, -1)
+        return {"status": "error", "error": "unknown_recipe", "balance": user["balance"], "mood_level": user["mood"]}
+
+    drink_name = MIX_RECIPES[key]
+    night = is_night(user["x_time"])
+    order_price = get_price_table(user["mood"], night).get(drink_name, 0)
+    price = max(0, round(order_price * 0.8)) if order_price else 0
+
+    # Секретные эффекты
+    if drink_name == "Мертвец":
+        user["balance"] *= 2
+        return {"status": "ok", "drink": drink_name, "price": 0, "secret": True, "effect": "balance_doubled",
+                "balance": user["balance"], "mood_level": user["mood"]}
+    if drink_name == "Ошибка бармена":
+        update_mood(user, 10)
+        return {"status": "ok", "drink": drink_name, "price": 0, "secret": True, "effect": "mood_max",
+                "balance": user["balance"], "mood_level": user["mood"]}
+    if drink_name == "Зелье бармена":
+        user["secret_unlocked"] = True
+        return {"status": "ok", "drink": drink_name, "price": 0, "secret": True, "effect": "secret_unlocked",
+                "balance": user["balance"], "mood_level": user["mood"]}
+    if drink_name == "Армагеддон":
+        user["balance"] = 0
+        user["bar_closed_until"] = time.time() + 600
+        return {"status": "ok", "drink": drink_name, "price": 0, "secret": True, "effect": "armageddon", "balance": 0,
+                "mood_level": "hostile"}
+
+    if user["balance"] < price:
+        update_mood(user, -1)
+        return {"status": "error", "error": "insufficient_funds", "price": price, "balance": user["balance"],
+                "mood_level": user["mood"]}
+
+    user["balance"] -= price
+    user["history"].append({"drink": drink_name, "price": price, "method": "mix"})
+    return {"status": "ok", "drink": drink_name, "price": price, "balance": user["balance"], "mood_level": user["mood"]}
+
+
+@app.get("/balance")
+async def balance(user: dict = Depends(get_auth_user)):
+    return {"status": "ok", "balance": user["balance"], "mood_level": user["mood"]}
+
+
+@app.post("/tip")
+async def tip(req: TipReq, user: dict = Depends(get_auth_user)):
+    blocked = check_bar_closed(user)
+    if blocked: return blocked
+
+    if req.amount <= 0:
+        return {"status": "error", "error": "invalid_amount", "balance": user["balance"], "mood_level": user["mood"]}
+    if req.amount > user["balance"]:
+        return {"status": "error", "error": "insufficient_funds", "balance": user["balance"],
+                "mood_level": user["mood"]}
+
+    user["balance"] -= req.amount
+    update_mood(user, 5)
+    return {"status": "ok", "tip": req.amount, "balance": user["balance"], "mood_level": user["mood"]}
+
+
+@app.get("/history")
+async def history(user: dict = Depends(get_auth_user)):
+    return {"status": "ok", "orders": user["history"][-50:], "balance": user["balance"], "mood_level": user["mood"]}
+
+
+@app.get("/profile")
+async def profile(user: dict = Depends(get_auth_user)):
+    return {
+        "status": "ok",
+        "id": user["id"],
+        "rank": get_rank(len(user["drink_counts"])),
+        "total_orders": user["total_orders"],
+        "unique_drinks": len(user["drink_counts"]),
+        "favorite_drink": get_favorite(user["drink_counts"]),
+        "bar_closed": user["bar_closed_until"] > time.time()
+    }
+
+
+# Обработка 405 для неверных методов
+@app.api_route("/{path:path}", methods=["PUT", "DELETE", "PATCH", "HEAD", "OPTIONS"])
+async def method_not_allowed():
+    return JSONResponse(status_code=405, content={"detail": "Method Not Allowed"})
+
 
 if __name__ == "__main__":
-    asyncio.run(BartenderExplorer(num_accounts=2).run())
+    import uvicorn
+
+    uvicorn.run(app, host="0.0.0.0", port=8000)
